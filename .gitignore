@@ -8,3 +8,5 @@ preview/node_modules/
 oolasite/dist/
 oolasite/node_modules/
 oolasite/.vite-ssg-temp/
+*.tsbuildinfo
+tmp-qa/
