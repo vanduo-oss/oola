@@ -1,0 +1,16 @@
+packages: []
+
+onlyBuiltDependencies:
+  - esbuild
+
+# pnpm 11 reads this from the workspace file (the .npmrc [] form is ignored for
+# lockfile verification). Lets first-party publishes land before the 24h age gate.
+minimumReleaseAgeExclude:
+  - "@vanduo-oss/*"
+
+patchedDependencies:
+  vite-ssg@28.3.0: patches/vite-ssg@28.3.0.patch
+
+peerDependencyRules:
+  allowedVersions:
+    unhead: 2 || 3

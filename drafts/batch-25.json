@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "description": "Structured Phi smoke batch (25) — hand-authored 24x24 outlines (no API)",
+    "variant": "oola-structured-phi",
+    "source": "hand",
+    "models": [
+      {
+        "id": "hand",
+        "short_id": "recraft-v4.1-pro-vector",
+        "label": "Hand (Structured Phi)",
+        "_comment": "Folder name is legacy; files are hand-authored viewBox 0 0 24 24"
+      }
+    ],
+    "keep": ["mail", "house", "search"],
+    "style_references": ["search", "house", "mail"]
+  },
+  "icons": [
+    { "name": "search", "hint": "search magnifying glass", "category": "ui-actions" },
+    { "name": "house", "hint": "house home", "category": "ui-actions" },
+    { "name": "user", "hint": "user person silhouette head and shoulders", "category": "ui-actions" },
+    { "name": "cog", "hint": "simple settings gear cog", "category": "ui-actions" },
+    { "name": "heart", "hint": "heart love", "category": "ui-actions" },
+    { "name": "star", "hint": "five-point star", "category": "ui-actions" },
+    { "name": "plus", "hint": "plus add cross", "category": "ui-actions" },
+    { "name": "trash", "hint": "trash delete bin with lid", "category": "ui-actions" },
+    { "name": "mail", "hint": "mail envelope", "category": "communication" },
+    { "name": "bell", "hint": "bell notification", "category": "communication" },
+    { "name": "x", "hint": "close dismiss x mark", "category": "arrows" },
+    { "name": "check", "hint": "check mark confirm", "category": "files-folders" },
+    { "name": "menu", "hint": "hamburger menu three lines", "category": "ui-actions" },
+    { "name": "minus", "hint": "minus remove horizontal line", "category": "media" },
+    { "name": "arrow-left", "hint": "arrow left back", "category": "arrows" },
+    { "name": "arrow-right", "hint": "arrow right forward", "category": "ui-actions" },
+    { "name": "chevron-down", "hint": "chevron down disclose", "category": "devices" },
+    { "name": "eye", "hint": "eye visibility", "category": "ui-actions" },
+    { "name": "lock", "hint": "lock security padlock", "category": "ui-actions" },
+    { "name": "calendar", "hint": "calendar date", "category": "ui-actions" },
+    { "name": "camera", "hint": "camera photo capture", "category": "ui-actions" },
+    { "name": "map-pin", "hint": "map pin location marker", "category": "communication" },
+    { "name": "phone", "hint": "phone handset call", "category": "communication" },
+    { "name": "download", "hint": "download arrow to tray", "category": "files-folders" },
+    { "name": "folder", "hint": "folder files", "category": "files-folders" }
+  ]
+}

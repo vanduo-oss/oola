@@ -1,0 +1,654 @@
+/* OOLA draft preview — layout + icon color shell on top of @vanduo-oss/vd3 */
+
+:root {
+  color-scheme: light dark;
+  --oola-main-offset: 5rem;
+  --oola-surface: color-mix(in srgb, var(--vd-bg-primary) 92%, transparent);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      color-mix(in srgb, var(--vd-color-primary) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 90% 0%,
+      color-mix(in srgb, var(--vd-neutral-4, #888) 18%, transparent),
+      transparent 55%
+    ),
+    var(--vd-bg-primary);
+  color: var(--vd-text-primary);
+  font-family: var(--vd-font-family, system-ui, sans-serif);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 10000;
+  padding: 0.5rem 0.75rem;
+  background: var(--vd-bg-primary);
+  color: var(--vd-text-primary);
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--vd-card-border-radius, 0.5rem);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.oola-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.oola-main {
+  flex: 1 1 auto;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: calc(var(--oola-main-offset) + 1.5rem) 0 3rem;
+}
+
+/* ── Navbar (vd3-docs pattern: always-visible theme controls) ── */
+
+.oola-navbar .vd-navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.vd-navbar-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.oola-brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.oola-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.oola-brand-name {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+}
+
+.oola-brand-sub {
+  font-size: 0.72rem;
+  color: var(--vd-text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.navbar-actions-always {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  order: 99;
+}
+
+.navbar-actions-always .vd-theme-customizer-trigger,
+.navbar-actions-always .vd-theme-switcher-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--vd-card-border-radius, 0.5rem);
+  background: transparent;
+  color: var(--vd-text-secondary);
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.navbar-actions-always .vd-theme-customizer-trigger:hover,
+.navbar-actions-always .vd-theme-customizer-trigger[aria-expanded="true"],
+.navbar-actions-always .vd-theme-switcher-toggle:hover {
+  color: var(--vd-color-primary);
+  border-color: var(--vd-color-primary);
+  background: var(--vd-color-primary-alpha-10);
+}
+
+/* ── Hero ── */
+
+.oola-hero {
+  margin-bottom: 2.5rem;
+}
+
+.oola-eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.oola-lede {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--vd-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* ── Sections ── */
+
+.oola-section {
+  margin-bottom: 3rem;
+}
+
+.oola-section-head h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.oola-section-head p {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--vd-text-secondary);
+  line-height: 1.5;
+}
+
+.oola-size-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.oola-size-label {
+  font-size: 0.85rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-size-group {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.oola-size-btn {
+  border: 1px solid var(--vd-border-color);
+  background: var(--oola-surface);
+  color: var(--vd-text-primary);
+  border-radius: var(--vd-card-border-radius, 0.5rem);
+  padding: 0.35rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.oola-size-btn.is-active {
+  border-color: var(--vd-color-primary);
+  color: var(--vd-color-primary);
+  background: var(--vd-color-primary-alpha-10);
+}
+
+.oola-pager {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.oola-pager .oola-size-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Icon weights (6-up) ── */
+
+.oola-weight-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.oola-weight-label {
+  font-size: 0.85rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-weight-select {
+  border: 1px solid var(--vd-border-color);
+  background: var(--oola-surface);
+  color: var(--vd-text-primary);
+  border-radius: var(--vd-card-border-radius, 0.5rem);
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.oola-weights-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.oola-weights {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(5.5rem, 1fr));
+  gap: 1.5rem 2rem;
+  min-width: 36rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--vd-border-color);
+  border-radius: calc(var(--vd-radius-scale, 0.5) * 1rem);
+  background: var(--oola-surface);
+  backdrop-filter: blur(8px);
+}
+
+.oola-weight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.oola-weight-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.oola-weight-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vd-text-primary);
+}
+
+.oola-weight-token {
+  font-size: 0.75rem;
+  color: var(--vd-color-primary, var(--vd-text-secondary));
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ── Comparison grid ── */
+
+.oola-grid-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--vd-border-color);
+  border-radius: calc(var(--vd-radius-scale, 0.5) * 1rem);
+  background: var(--oola-surface);
+  backdrop-filter: blur(8px);
+}
+
+.oola-grid {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.oola-grid--weights {
+  min-width: 60rem;
+  table-layout: fixed;
+}
+
+.oola-grid--weights th:first-child,
+.oola-grid--weights td:first-child {
+  width: 8.5rem;
+}
+
+.oola-grid th,
+.oola-grid td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--vd-border-color);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.oola-grid thead th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vd-text-secondary);
+  background: color-mix(in srgb, var(--vd-bg-secondary, #eee) 55%, transparent);
+  vertical-align: bottom;
+}
+
+.oola-model-slug {
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--vd-text-secondary);
+  word-break: break-all;
+}
+
+.oola-grid tbody th {
+  text-align: left;
+  font-weight: 500;
+}
+
+.oola-grid tbody th code {
+  font-size: 0.9rem;
+}
+
+.oola-keeper-badge,
+.oola-batch-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vd-color-primary, #333);
+  border: 1px solid color-mix(in srgb, var(--vd-color-primary, #333) 35%, transparent);
+  border-radius: 0.25rem;
+  vertical-align: middle;
+}
+
+.oola-batch-badge {
+  color: color-mix(in srgb, var(--vd-color-primary, #333) 70%, transparent);
+  border-color: color-mix(in srgb, var(--vd-color-primary, #333) 22%, transparent);
+}
+
+.oola-grid tbody tr:last-child th,
+.oola-grid tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.oola-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+}
+
+.oola-cell--motion {
+  overflow: visible;
+  /* Room for swing / scale so glyphs stay inside the cell (tables clip). */
+  min-height: 4.25rem;
+  padding: 0.35rem;
+}
+
+/* border-collapse tables often clip td overflow — keep motion cells open */
+.oola-grid td:has(> .oola-cell--motion) {
+  overflow: visible;
+}
+
+/* ── Icon paint ── */
+
+.oola-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.oola-icon-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.oola-icon-svg :deep(svg) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.oola-icon-missing {
+  opacity: 0.4;
+  font-size: 0.85rem;
+}
+
+/* Fill weight on open-path glyphs falls back to Regular outline */
+.oola-icon--fill-open {
+  opacity: 0.72;
+}
+
+/* ── Light-weight motion preview ── */
+
+.oola-icon--motion {
+  /* Expand layout box so rotated/scaled strokes aren't clipped by the
+     size×size hit box or table cell (overflow:visible alone is unreliable
+     under border-collapse + overflow-x scroll wrappers). */
+  box-sizing: content-box;
+  padding: calc(var(--oola-icon-size, 24px) * 0.22);
+  overflow: visible;
+}
+
+.oola-icon--motion .oola-icon-svg {
+  overflow: visible;
+}
+
+.oola-icon--motion .oola-icon-svg svg {
+  overflow: visible;
+  /* view-box = 24×24 origin; fill-box skewed origin and cropped top-right */
+  transform-box: view-box;
+  transform-origin: center;
+}
+
+/*
+ * draw — dash must exceed the longest Light path (~gear outline ≫ 48).
+ * Cycle: reveal → hold full glyph (≥40%) → draw-out so loop ≠ mid-stroke.
+ */
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg path,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg circle,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg line,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg polyline,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg polygon {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 0;
+  animation: oola-motion-draw 2.4s ease-in-out infinite;
+}
+
+@keyframes oola-motion-draw {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  38% {
+    stroke-dashoffset: 0;
+  }
+  82% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 280;
+  }
+}
+
+/* spin */
+.oola-icon--motion[data-motion="spin"] .oola-icon-svg svg {
+  animation: oola-motion-spin 2.4s linear infinite;
+}
+
+@keyframes oola-motion-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* beat */
+.oola-icon--motion[data-motion="beat"] .oola-icon-svg svg {
+  animation: oola-motion-beat 1.6s ease-in-out infinite;
+}
+
+@keyframes oola-motion-beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.12);
+  }
+  55% {
+    transform: scale(1.04);
+  }
+}
+
+/* swing — pivot from top of the 24×24 viewBox */
+.oola-icon--motion[data-motion="swing"] .oola-icon-svg svg {
+  transform-origin: center top;
+  animation: oola-motion-swing 2s ease-in-out infinite;
+}
+
+@keyframes oola-motion-swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+}
+
+/* bounce */
+.oola-icon--motion[data-motion="bounce"] .oola-icon-svg svg {
+  animation: oola-motion-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes oola-motion-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* pulse */
+.oola-icon--motion[data-motion="pulse"] .oola-icon-svg svg {
+  animation: oola-motion-pulse 2s ease-in-out infinite;
+}
+
+@keyframes oola-motion-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.06);
+  }
+}
+
+/* wiggle */
+.oola-icon--motion[data-motion="wiggle"] .oola-icon-svg svg {
+  animation: oola-motion-wiggle 1.8s ease-in-out infinite;
+}
+
+@keyframes oola-motion-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-6deg);
+  }
+  40% {
+    transform: rotate(6deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  80% {
+    transform: rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oola-icon--motion .oola-icon-svg svg,
+  .oola-icon--motion .oola-icon-svg svg path,
+  .oola-icon--motion .oola-icon-svg svg circle,
+  .oola-icon--motion .oola-icon-svg svg line,
+  .oola-icon--motion .oola-icon-svg svg polyline,
+  .oola-icon--motion .oola-icon-svg svg polygon {
+    animation: none !important;
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── About / footer ── */
+
+.oola-about-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--vd-text-secondary);
+  line-height: 1.6;
+}
+
+.oola-about-list code {
+  font-size: 0.9em;
+}
+
+.oola-footer {
+  border-top: 1px solid var(--vd-border-color);
+  padding: 1.25rem 1rem 2rem;
+  text-align: center;
+  color: var(--vd-text-secondary);
+  font-size: 0.9rem;
+}
+
+.oola-footer a {
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .oola-navbar .vd-navbar-toggle {
+    order: 100;
+  }
+
+  .navbar-actions-always {
+    margin-left: 0;
+  }
+}

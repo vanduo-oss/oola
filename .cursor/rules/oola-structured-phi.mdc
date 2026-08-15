@@ -1,0 +1,14 @@
+---
+description: OOLA Structured Phi icon drafting rules
+globs: drafts/**/*.svg,preview/**/*,scripts/**/*
+---
+
+# OOLA Structured Phi lock
+
+- Icons are `viewBox="0 0 24 24"`, `stroke-width="1.5"`, `stroke-linecap/linejoin="round"`, `fill="none"`, `currentColor`.
+- Soft ~2–3px corners (no hard-mitered apexes). No organic/wavy/droplet-only shapes.
+- φ sizes: primary ~12.4, secondary ~7.6, tertiary ~4.7. Search lens = primary diameter; handle = tertiary.
+- Cogs ≤6 teeth; bells need flared lip + clapper; keepers `mail`/`house`/`search` are frozen unless explicitly forced.
+- Before accepting any new SVG under `drafts/`, run `npm run qa:icons` and fix failures.
+- Do not use OpenRouter/Recraft for scale-up unless outputs pass the same QA.
+- Preview Fill on open paths must fall back to Regular outline (no blank cells).

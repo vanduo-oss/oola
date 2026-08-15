@@ -1,0 +1,6026 @@
+{
+  "meta": {
+    "description": "Structured Phi batch (1000) — hand/agent authored 24x24 outlines",
+    "variant": "oola-structured-phi",
+    "source": "hand",
+    "models": [
+      {
+        "id": "hand",
+        "short_id": "recraft-v4.1-pro-vector",
+        "label": "Hand (Structured Phi)"
+      }
+    ],
+    "keep": [
+      "mail",
+      "house",
+      "search"
+    ],
+    "style_references": [
+      "search",
+      "house",
+      "mail"
+    ]
+  },
+  "icons": [
+    {
+      "name": "search",
+      "hint": "search",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "house",
+      "hint": "house",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "user",
+      "hint": "user",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cog",
+      "hint": "cog",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "heart",
+      "hint": "heart",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "star",
+      "hint": "star",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "plus",
+      "hint": "plus",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "trash",
+      "hint": "trash",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "mail",
+      "hint": "mail",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "bell",
+      "hint": "bell",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "x",
+      "hint": "x",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "check",
+      "hint": "check",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "menu",
+      "hint": "menu",
+      "category": "ui-actions",
+      "sets_count": 3
+    },
+    {
+      "name": "minus",
+      "hint": "line style",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-left",
+      "hint": "arrow left",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-right",
+      "hint": "arrow right",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "chevron-down",
+      "hint": "chevron down",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "eye",
+      "hint": "eye",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "lock",
+      "hint": "lock",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "calendar",
+      "hint": "calendar",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "camera",
+      "hint": "camera",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "map-pin",
+      "hint": "map pin",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "phone",
+      "hint": "phone",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "download",
+      "hint": "download",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "folder",
+      "hint": "folder",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down",
+      "hint": "arrow down",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "square-pen",
+      "hint": "square pen",
+      "category": "brands",
+      "sets_count": 3
+    },
+    {
+      "name": "flame",
+      "hint": "flame",
+      "category": "buildings",
+      "sets_count": 4
+    },
+    {
+      "name": "at-sign",
+      "hint": "at sign",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-ellipsis",
+      "hint": "circle ellipsis",
+      "category": "connectivity",
+      "sets_count": 3
+    },
+    {
+      "name": "battery-full",
+      "hint": "battery full",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-check",
+      "hint": "circle check",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-percent",
+      "hint": "badge percent",
+      "category": "finance",
+      "sets_count": 2
+    },
+    {
+      "name": "calendar-heart",
+      "hint": "calendar heart",
+      "category": "health",
+      "sets_count": 2
+    },
+    {
+      "name": "map",
+      "hint": "map",
+      "category": "maps-travel",
+      "sets_count": 4
+    },
+    {
+      "name": "book-open",
+      "hint": "book open",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "equal",
+      "hint": "equal",
+      "category": "misc",
+      "sets_count": 3
+    },
+    {
+      "name": "bird",
+      "hint": "bird",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "cake",
+      "hint": "cake",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "atom",
+      "hint": "atom",
+      "category": "science",
+      "sets_count": 2
+    },
+    {
+      "name": "divide",
+      "hint": "divide",
+      "category": "security",
+      "sets_count": 3
+    },
+    {
+      "name": "flag-banner",
+      "hint": "flag banner",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "bold",
+      "hint": "bold",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "calendar-off",
+      "hint": "calendar off",
+      "category": "time",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-up-right",
+      "hint": "arrow up right",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "brain-circuit",
+      "hint": "brain circuit",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-down-left",
+      "hint": "arrow down left",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "chef-hat",
+      "hint": "chef hat",
+      "category": "brands",
+      "sets_count": 2
+    },
+    {
+      "name": "sun",
+      "hint": "sun",
+      "category": "buildings",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-question-mark",
+      "hint": "circle question mark",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "ambulance",
+      "hint": "ambulance",
+      "category": "connectivity",
+      "sets_count": 2
+    },
+    {
+      "name": "battery-medium",
+      "hint": "battery medium",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud",
+      "hint": "cloud",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "octagon",
+      "hint": "octagon",
+      "category": "finance",
+      "sets_count": 2
+    },
+    {
+      "name": "stethoscope",
+      "hint": "stethoscope",
+      "category": "health",
+      "sets_count": 2
+    },
+    {
+      "name": "redo-2",
+      "hint": "redo 2",
+      "category": "maps-travel",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-pause",
+      "hint": "circle pause",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "graduation-cap",
+      "hint": "graduation cap",
+      "category": "misc",
+      "sets_count": 3
+    },
+    {
+      "name": "bone",
+      "hint": "bone",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "share",
+      "hint": "share",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "beaker",
+      "hint": "beaker",
+      "category": "science",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-alert",
+      "hint": "shield alert",
+      "category": "security",
+      "sets_count": 3
+    },
+    {
+      "name": "flag-off",
+      "hint": "flag off",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "chart-pie",
+      "hint": "chart pie",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "eraser",
+      "hint": "eraser",
+      "category": "time",
+      "sets_count": 2
+    },
+    {
+      "name": "badge-check",
+      "hint": "badge check",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-alert",
+      "hint": "cloud alert",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-down-right",
+      "hint": "arrow down right",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "amazon-logo",
+      "hint": "amazon logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "zap",
+      "hint": "bolt",
+      "category": "buildings",
+      "sets_count": 4
+    },
+    {
+      "name": "clock",
+      "hint": "clock",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "wifi-zero",
+      "hint": "wifi zero",
+      "category": "connectivity",
+      "sets_count": 2
+    },
+    {
+      "name": "chevron-left",
+      "hint": "chevron left",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-download",
+      "hint": "cloud download",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "app-store-logo",
+      "hint": "app store logo",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "heart-off",
+      "hint": "heart off",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "undo-2",
+      "hint": "undo 2",
+      "category": "maps-travel",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-play",
+      "hint": "circle play",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "angle",
+      "hint": "angle",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "cat",
+      "hint": "cat",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "trophy",
+      "hint": "trophy",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "magnet",
+      "hint": "magnet",
+      "category": "science",
+      "sets_count": 2
+    },
+    {
+      "name": "badge-alert",
+      "hint": "badge alert",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "flag-triangle-left",
+      "hint": "flag triangle left",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "dollar-sign",
+      "hint": "dollar sign",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "package",
+      "hint": "package",
+      "category": "time",
+      "sets_count": 2
+    },
+    {
+      "name": "ban",
+      "hint": "ban",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-moon",
+      "hint": "cloud moon",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-up",
+      "hint": "arrow up",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "angular-logo",
+      "hint": "angular logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "baby",
+      "hint": "baby",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "key",
+      "hint": "key",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "antenna",
+      "hint": "antenna",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevron-right",
+      "hint": "chevron right",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-upload",
+      "hint": "cloud upload",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-euro",
+      "hint": "badge euro",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "house-heart",
+      "hint": "house heart",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "briefcase-medical",
+      "hint": "briefcase medical",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "circle-plus",
+      "hint": "circle plus",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "asterisk",
+      "hint": "asterisk",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "dog",
+      "hint": "dog",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "user-minus",
+      "hint": "user minus",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "test-tube",
+      "hint": "test tube",
+      "category": "science",
+      "sets_count": 2
+    },
+    {
+      "name": "badge-question-mark",
+      "hint": "badge question mark",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "flag-triangle-right",
+      "hint": "flag triangle right",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "italic",
+      "hint": "italic",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "bicycle",
+      "hint": "bicycle",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "bookmark",
+      "hint": "bookmark",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-rain",
+      "hint": "cloud rain",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-up-left",
+      "hint": "arrow up left",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "apple",
+      "hint": "apple",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "backpack",
+      "hint": "backpack",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "message-circle",
+      "hint": "message circle",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "castle-turret",
+      "hint": "castle turret",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevron-up",
+      "hint": "chevron up",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "copy",
+      "hint": "copy",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-indian-rupee",
+      "hint": "badge indian rupee",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "mask-happy",
+      "hint": "mask happy",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "bus",
+      "hint": "bus",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "circle-stop",
+      "hint": "circle stop",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "binary",
+      "hint": "binary",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "ghost",
+      "hint": "ghost",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "user-plus",
+      "hint": "user plus",
+      "category": "people",
+      "sets_count": 4
+    },
+    {
+      "name": "circuitry",
+      "hint": "circuitry",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "lock-keyhole",
+      "hint": "lock keyhole",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "peace",
+      "hint": "peace",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "link",
+      "hint": "link",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "calendar-1",
+      "hint": "calendar 1",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "briefcase",
+      "hint": "briefcase",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-sun",
+      "hint": "cloud sun",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "banknote",
+      "hint": "banknote",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "apple-logo",
+      "hint": "apple logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "beer",
+      "hint": "beer",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "message-square",
+      "hint": "message square",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "chart-network",
+      "hint": "chart network",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevrons-down",
+      "hint": "chevrons down",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "file",
+      "hint": "file",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-japanese-yen",
+      "hint": "badge japanese yen",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "mask-sad",
+      "hint": "mask sad",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "church",
+      "hint": "church",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "fast-forward",
+      "hint": "fast forward",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "binoculars",
+      "hint": "binoculars",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "ice-cream-bowl",
+      "hint": "ice cream bowl",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "award",
+      "hint": "award",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "dna-off",
+      "hint": "dna off",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "lock-keyhole-open",
+      "hint": "lock keyhole open",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "steam-logo",
+      "hint": "steam logo",
+      "category": "social",
+      "sets_count": 1
+    },
+    {
+      "name": "list-ordered",
+      "hint": "list ordered",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "calendar-fold",
+      "hint": "calendar fold",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "bug",
+      "hint": "bug",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "moon-star",
+      "hint": "moon star",
+      "category": "weather",
+      "sets_count": 2
+    },
+    {
+      "name": "chevrons-up-down",
+      "hint": "chevrons up down",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "behance-logo",
+      "hint": "behance logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "camera-off",
+      "hint": "camera off",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "messages-square",
+      "hint": "messages square",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "eclipse",
+      "hint": "eclipse",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevrons-left",
+      "hint": "chevrons left",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "folder-open",
+      "hint": "folder open",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-pound-sterling",
+      "hint": "badge pound sterling",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "pill-bottle",
+      "hint": "pill bottle",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "croissant",
+      "hint": "croissant",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "file-text",
+      "hint": "file text",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "biohazard",
+      "hint": "biohazard",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "rabbit",
+      "hint": "rabbit",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "bandage",
+      "hint": "bandage",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "flask-conical-off",
+      "hint": "flask conical off",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "shield-off",
+      "hint": "shield off",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "scissors",
+      "hint": "scissors",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "calendars",
+      "hint": "calendars",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "calculator",
+      "hint": "calculator",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "alarm-smoke",
+      "hint": "alarm smoke",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "ellipsis",
+      "hint": "ellipsis",
+      "category": "arrows",
+      "sets_count": 4
+    },
+    {
+      "name": "brackets-square",
+      "hint": "brackets square",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "cloud-fog",
+      "hint": "cloud fog",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "phone-incoming",
+      "hint": "phone incoming",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "ellipse",
+      "hint": "ellipse",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevrons-right",
+      "hint": "chevrons right",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "folder-plus",
+      "hint": "folder plus",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-russian-ruble",
+      "hint": "badge russian ruble",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "square-activity",
+      "hint": "square activity",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "cross",
+      "hint": "cross",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "image",
+      "hint": "image",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "bomb",
+      "hint": "bomb",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "shrimp",
+      "hint": "shrimp",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "brain",
+      "hint": "brain",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "flask-round",
+      "hint": "flask round",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "signature",
+      "hint": "signature",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "strikethrough",
+      "hint": "strikethrough",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "diamond-alert",
+      "hint": "warning diamond",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "calendar-days",
+      "hint": "calendar days",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "app-window-mac",
+      "hint": "app window mac",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-chevron-down",
+      "hint": "circle chevron down",
+      "category": "arrows",
+      "sets_count": 3
+    },
+    {
+      "name": "bubbles",
+      "hint": "bubbles",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "cloud-snow",
+      "hint": "cloud snow",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "phone-off",
+      "hint": "phone off",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "ethernet-port",
+      "hint": "ethernet port",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "chevrons-up",
+      "hint": "chevrons up",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "layout-grid",
+      "hint": "layout grid",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-swiss-franc",
+      "hint": "badge swiss franc",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "tooth",
+      "hint": "tooth",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "diamond",
+      "hint": "diamond",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "indian-rupee",
+      "hint": "indian rupee",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "broom",
+      "hint": "broom",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "skull",
+      "hint": "skull",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "cloud-lightning",
+      "hint": "cloud lightning",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "gitlab",
+      "hint": "gitlab logo simple",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "stamp",
+      "hint": "stamp",
+      "category": "security",
+      "sets_count": 2
+    },
+    {
+      "name": "underline",
+      "hint": "underline",
+      "category": "text-formatting",
+      "sets_count": 4
+    },
+    {
+      "name": "milestone",
+      "hint": "milestone",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "chart-bar",
+      "hint": "chart bar",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "between-horizontal-start",
+      "hint": "between horizontal start",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "ellipsis-vertical",
+      "hint": "ellipsis vertical",
+      "category": "arrows",
+      "sets_count": 3
+    },
+    {
+      "name": "coda-logo",
+      "hint": "coda logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "concierge-bell",
+      "hint": "concierge bell",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "phone-outgoing",
+      "hint": "phone outgoing",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "film-script",
+      "hint": "film script",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "cpu",
+      "hint": "cpu",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "newspaper",
+      "hint": "newspaper",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "badge-turkish-lira",
+      "hint": "badge turkish lira",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "venetian-mask",
+      "hint": "venetian mask",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "egg",
+      "hint": "egg",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "japanese-yen",
+      "hint": "japanese yen",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cherry",
+      "hint": "cherry",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "vibrate",
+      "hint": "vibrate",
+      "category": "nature",
+      "sets_count": 2
+    },
+    {
+      "name": "cookie",
+      "hint": "cookie",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "gitlab-logo",
+      "hint": "gitlab logo",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "android-logo",
+      "hint": "android logo",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-center-horizontal",
+      "hint": "align center horizontal",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "package-2",
+      "hint": "package 2",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-alert",
+      "hint": "circle alert",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "between-vertical-start",
+      "hint": "between vertical start",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "navigation",
+      "hint": "navigation",
+      "category": "arrows",
+      "sets_count": 3
+    },
+    {
+      "name": "codepen-logo",
+      "hint": "codepen logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "fan",
+      "hint": "fan",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "qr-code",
+      "hint": "qr code",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "film-strip",
+      "hint": "film strip",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "database",
+      "hint": "database",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "paperclip",
+      "hint": "paperclip",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "bank",
+      "hint": "bank",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "weight",
+      "hint": "weight",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "factory",
+      "hint": "factory",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "mic",
+      "hint": "mic",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cigarette",
+      "hint": "cigarette",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "alien",
+      "hint": "alien",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "droplet",
+      "hint": "droplet",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "jar-label",
+      "hint": "jar label",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "astroid",
+      "hint": "astroid",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-center-vertical",
+      "hint": "align center vertical",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "package-open",
+      "hint": "package open",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-arrow-down",
+      "hint": "circle arrow down",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "brick-wall-fire",
+      "hint": "brick wall fire",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "skip-back",
+      "hint": "skip back",
+      "category": "arrows",
+      "sets_count": 3
+    },
+    {
+      "name": "dev-to-logo",
+      "hint": "dev to logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "fire-extinguisher",
+      "hint": "fire extinguisher",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "rss",
+      "hint": "rss",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "flower-tulip",
+      "hint": "flower tulip",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "tablet",
+      "hint": "tablet",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "upload",
+      "hint": "upload",
+      "category": "files-folders",
+      "sets_count": 4
+    },
+    {
+      "name": "chart-bar-big",
+      "hint": "chart bar big",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "weight-tilde",
+      "hint": "weight tilde",
+      "category": "health",
+      "sets_count": 1
+    },
+    {
+      "name": "fuel",
+      "hint": "fuel",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "paintbrush",
+      "hint": "brush",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "citrus",
+      "hint": "citrus",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "beef",
+      "hint": "beef",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "fish",
+      "hint": "fish",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "magnet-straight",
+      "hint": "magnet straight",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "badge-cent",
+      "hint": "badge cent",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-end-vertical",
+      "hint": "align end vertical",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "repeat-2",
+      "hint": "repeat 2",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-arrow-left",
+      "hint": "circle arrow left",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "calendar-star",
+      "hint": "calendar star",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "skip-forward",
+      "hint": "skip forward",
+      "category": "arrows",
+      "sets_count": 3
+    },
+    {
+      "name": "dribbble-logo",
+      "hint": "dribbble logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "footprints",
+      "hint": "footprints",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "shield-check",
+      "hint": "shield check",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "globe-asia-australia",
+      "hint": "globe asia australia",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "ticket",
+      "hint": "ticket",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "clipboard",
+      "hint": "clipboard",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-bar-decreasing",
+      "hint": "chart bar decreasing",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "hamburger",
+      "hint": "hamburger",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "pause",
+      "hint": "pause",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "clover",
+      "hint": "clover",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "beef-off",
+      "hint": "beef off",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "flask-conical",
+      "hint": "flask conical",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "meteor",
+      "hint": "meteor",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "badge-info",
+      "hint": "badge info",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-start-vertical",
+      "hint": "align start vertical",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "repeat-off",
+      "hint": "repeat off",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-arrow-right",
+      "hint": "circle arrow right",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "campfire",
+      "hint": "campfire",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrows-in",
+      "hint": "arrows in",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "fediverse-logo",
+      "hint": "fediverse logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "gauge",
+      "hint": "gauge",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "smartphone",
+      "hint": "smartphone",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "globe-europe-africa",
+      "hint": "globe europe africa",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "tv",
+      "hint": "tv",
+      "category": "devices",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-check",
+      "hint": "cloud check",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-bar-increasing",
+      "hint": "chart bar increasing",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "hand-heart",
+      "hint": "hand heart",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "pencil",
+      "hint": "pencil",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "club",
+      "hint": "club",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "beer-off",
+      "hint": "beer off",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "handshake",
+      "hint": "handshake",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "orbit",
+      "hint": "orbit",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "brick-wall-shield",
+      "hint": "brick wall shield",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-dollar-sign",
+      "hint": "circle dollar sign",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "step-back",
+      "hint": "step back",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-arrow-up",
+      "hint": "circle arrow up",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "circle-star",
+      "hint": "circle star",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "chevrons-down-up",
+      "hint": "chevrons down up",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "figma-logo",
+      "hint": "figma logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "infinity",
+      "hint": "infinity",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "video",
+      "hint": "video",
+      "category": "communication",
+      "sets_count": 4
+    },
+    {
+      "name": "globe-hemisphere-east",
+      "hint": "globe hemisphere east",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "alarm-clock",
+      "hint": "alarm clock",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "cloud-off",
+      "hint": "cloud off",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-column",
+      "hint": "chart column",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "hospital",
+      "hint": "hospital",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "pipette",
+      "hint": "pipette",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "container",
+      "hint": "container",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "birdhouse",
+      "hint": "birdhouse",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "hard-hat",
+      "hint": "hard hat",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "telescope",
+      "hint": "telescope",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "bridge",
+      "hint": "bridge",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading",
+      "hint": "heading",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "steps",
+      "hint": "steps",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-minus",
+      "hint": "circle minus",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-backup",
+      "hint": "cloud backup",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-chevron-left",
+      "hint": "circle chevron left",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "flying-saucer",
+      "hint": "flying saucer",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "leaf",
+      "hint": "leaf",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "arrow-left-right",
+      "hint": "arrow left right",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "globe-hemisphere-west",
+      "hint": "globe hemisphere west",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "audio-waveform",
+      "hint": "audio waveform",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-check",
+      "hint": "file check",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-column-big",
+      "hint": "chart column big",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "ice-cream-cone",
+      "hint": "ice cream cone",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "pound-sterling",
+      "hint": "pound sterling",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cooking-pot",
+      "hint": "cooking pot",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "bone-fracture",
+      "hint": "bone fracture",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "heart-crack",
+      "hint": "heart crack",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "test-tube-diagonal",
+      "hint": "test tube diagonal",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "calendar-clock",
+      "hint": "calendar clock",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-1",
+      "hint": "heading 1",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "timer-reset",
+      "hint": "timer reset",
+      "category": "time",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-user",
+      "hint": "circle user",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-drizzle",
+      "hint": "cloud drizzle",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-chevron-right",
+      "hint": "circle chevron right",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "github-logo",
+      "hint": "github logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "microwave",
+      "hint": "microwave",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "building",
+      "hint": "building",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "globe-lock",
+      "hint": "earth lock",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "battery-charging",
+      "hint": "battery charging",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-up",
+      "hint": "file up",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-column-decreasing",
+      "hint": "chart column decreasing",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "mailbox",
+      "hint": "mailbox",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "radio",
+      "hint": "radio",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cube",
+      "hint": "cube",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "bowl-steam",
+      "hint": "bowl steam",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "luggage",
+      "hint": "baggage claim",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "test-tubes",
+      "hint": "test tubes",
+      "category": "science",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-divide",
+      "hint": "circle divide",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-2",
+      "hint": "heading 2",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "circle-x",
+      "hint": "circle x",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-hail",
+      "hint": "cloud hail",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-chevron-up",
+      "hint": "circle chevron up",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "goodreads-logo",
+      "hint": "goodreads logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "radio-tower",
+      "hint": "radio tower",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "building-office",
+      "hint": "business",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "globe-stand",
+      "hint": "globe stand",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "battery-empty",
+      "hint": "battery 0 bar",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-x",
+      "hint": "file x",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-column-increasing",
+      "hint": "chart column increasing",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "map-pin-plus",
+      "hint": "map pin plus",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "rewind",
+      "hint": "rewind",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cube-transparent",
+      "hint": "cube transparent",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "bowling-ball",
+      "hint": "bowling ball",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "medal",
+      "hint": "medal",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-1",
+      "hint": "clock 1",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-3",
+      "hint": "heading 3",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "code",
+      "hint": "code",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-moon-rain",
+      "hint": "cloud moon rain",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "corner-down-right",
+      "hint": "corner down right",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "google-chrome-logo",
+      "hint": "google chrome logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "solar-panel",
+      "hint": "solar panel",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "card-sim",
+      "hint": "card sim",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "house-wifi",
+      "hint": "house wifi",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "battery-low",
+      "hint": "battery low",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "grid-2x2",
+      "hint": "grid 2x2",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-column-stacked",
+      "hint": "chart column stacked",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "martini",
+      "hint": "martini",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "sliders-horizontal",
+      "hint": "sliders horizontal",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "cylinder",
+      "hint": "cylinder",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "bug-off",
+      "hint": "bug off",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "meh",
+      "hint": "face neutral",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-10",
+      "hint": "clock 10",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "hexagon",
+      "hint": "hexagon",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "credit-card",
+      "hint": "credit card",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-rain-wind",
+      "hint": "cloud rain wind",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "git-merge",
+      "hint": "git merge",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "google-drive-logo",
+      "hint": "google drive logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "sprout",
+      "hint": "sprout",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "contrast",
+      "hint": "contrast",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "land-plot",
+      "hint": "land plot",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "battery-plus",
+      "hint": "battery plus",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "receipt-text",
+      "hint": "receipt text",
+      "category": "files-folders",
+      "sets_count": 3
+    },
+    {
+      "name": "chart-polar",
+      "hint": "chart polar",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "mosque",
+      "hint": "mosque",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "sliders-vertical",
+      "hint": "sliders vertical",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "dot",
+      "hint": "dot",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "butterfly",
+      "hint": "butterfly",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "mountain",
+      "hint": "mountain",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-11",
+      "hint": "clock 11",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "list-bullet",
+      "hint": "format list bulleted",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "delete",
+      "hint": "delete",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloud-sun-rain",
+      "hint": "cloud sun rain",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-down",
+      "hint": "square arrow down",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "google-logo",
+      "hint": "google logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "thermometer",
+      "hint": "thermometer",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "grid-3x3",
+      "hint": "grid 3x3",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "languages",
+      "hint": "languages",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "battery-warning",
+      "hint": "battery warning",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "bookmark-off",
+      "hint": "bookmark off",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "chart-spline",
+      "hint": "chart spline",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "motorbike",
+      "hint": "motorbike",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "users",
+      "hint": "group",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "equal-not",
+      "hint": "equal not",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "cactus",
+      "hint": "cactus",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "party-popper",
+      "hint": "party popper",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-12",
+      "hint": "clock 12",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "paint-bucket",
+      "hint": "paint bucket",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "euro",
+      "hint": "euro",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "cloudy",
+      "hint": "cloudy",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-down-left",
+      "hint": "square arrow down left",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "intersect-square",
+      "hint": "intersect square",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "waves",
+      "hint": "line squiggle",
+      "category": "buildings",
+      "sets_count": 3
+    },
+    {
+      "name": "hourglass",
+      "hint": "hourglass",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "link-2",
+      "hint": "link 2",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "blocks",
+      "hint": "blocks",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "cloud-sync",
+      "hint": "cloud sync",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "circle-euro",
+      "hint": "circle euro",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "pizza",
+      "hint": "pizza",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "video-off",
+      "hint": "video off",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "feather",
+      "hint": "feather",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "cow",
+      "hint": "cow",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "recycle",
+      "hint": "recycle",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-2",
+      "hint": "clock 2",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "paint-roller",
+      "hint": "paint roller",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "expand",
+      "hint": "expand",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "droplets",
+      "hint": "droplets",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-left",
+      "hint": "square arrow left",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "lastfm-logo",
+      "hint": "lastfm logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "baby-carriage",
+      "hint": "no stroller",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "megaphone",
+      "hint": "megaphone",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "link-simple-horizontal",
+      "hint": "link simple horizontal",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "bluetooth-connected",
+      "hint": "bluetooth connected",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-archive",
+      "hint": "file archive",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "circle-percent",
+      "hint": "circle percent",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "plug-zap",
+      "hint": "ev charger",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "volume-2",
+      "hint": "volume 2",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "git-commit-vertical",
+      "hint": "git commit vertical",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "fish-off",
+      "hint": "fish off",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "scale",
+      "hint": "scale",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-3",
+      "hint": "clock 3",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "pen-tool",
+      "hint": "pen tool",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "external-link",
+      "hint": "external link",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "flame-kindling",
+      "hint": "flame kindling",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-right",
+      "hint": "square arrow right",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "markdown-logo",
+      "hint": "markdown logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "barrel",
+      "hint": "barrel",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "merge",
+      "hint": "merge",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "link-simple-horizontal-break",
+      "hint": "link simple horizontal break",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "bluetooth-off",
+      "hint": "bluetooth off",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-chart-column",
+      "hint": "file chart column",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "circle-pound-sterling",
+      "hint": "circle pound sterling",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "sailboat",
+      "hint": "sailboat",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "volume-x",
+      "hint": "volume x",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "git-fork",
+      "hint": "git fork",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "fishing-rod",
+      "hint": "fishing rod",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "shield-plus",
+      "hint": "shield plus",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-4",
+      "hint": "clock 4",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "pentagon",
+      "hint": "pentagon",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "eye-off",
+      "hint": "eye off",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "glass-water",
+      "hint": "glass water",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-up",
+      "hint": "square arrow up",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "mastodon-logo",
+      "hint": "mastodon logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "bath",
+      "hint": "bath",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "message-circle-more",
+      "hint": "message circle more",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "linkedin-logo",
+      "hint": "linkedin logo",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "cast",
+      "hint": "cast",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-code",
+      "hint": "file code",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "court-basketball",
+      "hint": "court basketball",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "scooter",
+      "hint": "scooter",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "zap-off",
+      "hint": "zap off",
+      "category": "media",
+      "sets_count": 4
+    },
+    {
+      "name": "git-pull-request",
+      "hint": "git pull request",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "flag-pennant",
+      "hint": "flag pennant",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "snowflake",
+      "hint": "snowflake",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-5",
+      "hint": "clock 5",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "shapes",
+      "hint": "shapes",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "file-plus",
+      "hint": "file plus",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "shield-star",
+      "hint": "shield star",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-arrow-up-left",
+      "hint": "square arrow up left",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "medium-logo",
+      "hint": "medium logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "bathtub",
+      "hint": "bathtub",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "message-circle-off",
+      "hint": "message circle off",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "linktree-logo",
+      "hint": "linktree logo",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "command",
+      "hint": "command",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-down",
+      "hint": "file down",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "currency-bangladeshi",
+      "hint": "currency bangladeshi",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "taxi",
+      "hint": "car taxi front",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "airplay",
+      "hint": "airplay",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "guitar",
+      "hint": "guitar",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "flower-2",
+      "hint": "flower 2",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "syringe",
+      "hint": "syringe",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-6",
+      "hint": "clock 6",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "sigma",
+      "hint": "sigma",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "file-search",
+      "hint": "file search",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "soap-dispenser-droplet",
+      "hint": "soap dispenser droplet",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "square-split-horizontal",
+      "hint": "square split horizontal",
+      "category": "arrows",
+      "sets_count": 2
+    },
+    {
+      "name": "messenger-logo",
+      "hint": "messenger logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "blinds",
+      "hint": "blinds",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "message-square-more",
+      "hint": "message square more",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "magic-wand",
+      "hint": "magic wand",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "corner-down-left",
+      "hint": "corner down left",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-image",
+      "hint": "file image",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "currency-eth",
+      "hint": "currency eth",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "tent",
+      "hint": "tent",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "app-window",
+      "hint": "app window",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "hammer",
+      "hint": "hammer",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "flower-lotus",
+      "hint": "flower lotus",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "tornado",
+      "hint": "tornado",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-7",
+      "hint": "clock 7",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "subscript",
+      "hint": "subscript",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "fingerprint",
+      "hint": "fingerprint pattern",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "soundcloud-logo",
+      "hint": "soundcloud logo",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "a-arrow-down",
+      "hint": "a arrow down",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "meta-logo",
+      "hint": "meta logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "building-2",
+      "hint": "building 2",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "message-square-text",
+      "hint": "message square text",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "network-slash",
+      "hint": "network slash",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "crosshair",
+      "hint": "crosshair",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "file-lock",
+      "hint": "file lock",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "currency-krw",
+      "hint": "currency krw",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "trees",
+      "hint": "trees",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "badge",
+      "hint": "badge",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "highlighter",
+      "hint": "highlighter",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "horse",
+      "hint": "horse",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "volleyball",
+      "hint": "volleyball",
+      "category": "people",
+      "sets_count": 3
+    },
+    {
+      "name": "clock-8",
+      "hint": "clock 8",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "superscript",
+      "hint": "superscript",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "flag",
+      "hint": "flag",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "square-star",
+      "hint": "square star",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "a-arrow-up",
+      "hint": "a arrow up",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "notion-logo",
+      "hint": "notion logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "desk",
+      "hint": "desk",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "monitor-smartphone",
+      "hint": "monitor smartphone",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "nuclear-plant",
+      "hint": "nuclear plant",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "flashlight",
+      "hint": "flashlight",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "files",
+      "hint": "file stack",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "currency-kzt",
+      "hint": "currency kzt",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "truck",
+      "hint": "truck",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "bitcoin",
+      "hint": "bitcoin",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "lamp",
+      "hint": "lamp",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "iteration-ccw",
+      "hint": "iteration ccw",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "balloon",
+      "hint": "balloon",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "clock-9",
+      "hint": "clock 9",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "text-align-center",
+      "hint": "text align center",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "funnel",
+      "hint": "funnel",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "star-and-crescent",
+      "hint": "star and crescent",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "app-settings-alt",
+      "hint": "app settings alt",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "ny-times-logo",
+      "hint": "ny times logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "dices",
+      "hint": "dices",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "network",
+      "hint": "network",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "philippine-peso",
+      "hint": "philippine peso",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "gamepad-2",
+      "hint": "gamepad",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folder-cog",
+      "hint": "folder cog",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "currency-ngn",
+      "hint": "currency ngn",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "washing-machine",
+      "hint": "washing machine",
+      "category": "maps-travel",
+      "sets_count": 3
+    },
+    {
+      "name": "blend",
+      "hint": "blend",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "lasso",
+      "hint": "lasso",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "iteration-cw",
+      "hint": "iteration cw",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "baseball",
+      "hint": "sports baseball",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "clock-alert",
+      "hint": "clock alert",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "text-align-end",
+      "hint": "text align end",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "gift",
+      "hint": "gift",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "star-of-david",
+      "hint": "star of david",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "apps-outage",
+      "hint": "apps outage",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "open-ai-logo",
+      "hint": "open ai logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "door-open",
+      "hint": "door open",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "phone-call",
+      "hint": "phone call",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "pipe",
+      "hint": "pipe",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "hd",
+      "hint": "hd",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folder-down",
+      "hint": "folder down",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "diamond-percent",
+      "hint": "diamond percent",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "bike",
+      "hint": "bike",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "captions",
+      "hint": "captions",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "lectern",
+      "hint": "lectern",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "lamp-pendant",
+      "hint": "lamp pendant",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "basketball",
+      "hint": "sports basketball",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "clock-countdown",
+      "hint": "clock countdown",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "text-align-justify",
+      "hint": "text align justify",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "globe",
+      "hint": "earth",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "star-off",
+      "hint": "star off",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "archive-box-arrow-down",
+      "hint": "archive box arrow down",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "patreon-logo",
+      "hint": "patreon logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "dumbbell",
+      "hint": "dumbbell",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "presentation",
+      "hint": "presentation",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "planet",
+      "hint": "planet",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "headphones",
+      "hint": "headphones",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folder-lock",
+      "hint": "folder lock",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "git-graph",
+      "hint": "git graph",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "bowl-food",
+      "hint": "ramen dining",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "circle",
+      "hint": "circle",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "loader-circle",
+      "hint": "loader circle",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "panda",
+      "hint": "panda",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "bed-double",
+      "hint": "bed double",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "clock-fading",
+      "hint": "clock fading",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "text-align-start",
+      "hint": "text align start",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "hash",
+      "hint": "hash",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sun-horizon",
+      "hint": "sun horizon",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-double-up-left",
+      "hint": "arrow bend double up left",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "paypal-logo",
+      "hint": "paypal logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "elevator",
+      "hint": "elevator",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "scan",
+      "hint": "scan",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "potted-plant",
+      "hint": "potted plant",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "headset",
+      "hint": "headset",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folder-up",
+      "hint": "folder up",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "graph",
+      "hint": "graph",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "carrot",
+      "hint": "carrot",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "circle-dashed",
+      "hint": "circle dashed",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "metronome",
+      "hint": "metronome",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "pants",
+      "hint": "pants",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "bed-single",
+      "hint": "bed single",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "detective",
+      "hint": "detective",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "type",
+      "hint": "type",
+      "category": "text-formatting",
+      "sets_count": 3
+    },
+    {
+      "name": "id-card",
+      "hint": "id card",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sun-moon",
+      "hint": "sun moon",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-double-up-right",
+      "hint": "arrow bend double up right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "phosphor-logo",
+      "hint": "phosphor logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "fence",
+      "hint": "fence",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "smiley",
+      "hint": "face",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "radio-off",
+      "hint": "radio off",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "heart-pulse",
+      "hint": "heart pulse",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folder-x",
+      "hint": "folder x",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "graphics-card",
+      "hint": "graphics card",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "castle",
+      "hint": "castle",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "crop",
+      "hint": "crop",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "nut",
+      "hint": "nut",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "ratio",
+      "hint": "ratio",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "boxing-glove",
+      "hint": "sports mma",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "key-round",
+      "hint": "key round",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-end-horizontal",
+      "hint": "align end horizontal",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "info",
+      "hint": "info",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sun-snow",
+      "hint": "sun snow",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-down-left",
+      "hint": "arrow bend down left",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "read-cv-logo",
+      "hint": "read cv logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "refrigerator",
+      "hint": "refrigerator",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "split",
+      "hint": "split",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "radioactive",
+      "hint": "radioactive",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "keyboard",
+      "hint": "keyboard",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "folders",
+      "hint": "folders",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "instagram-logo",
+      "hint": "instagram logo",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "corner-up-left",
+      "hint": "corner up left",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "droplet-off",
+      "hint": "droplet off",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "pen",
+      "hint": "pen",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "snail",
+      "hint": "snail",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "construction",
+      "hint": "construction",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "key-square",
+      "hint": "key square",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-horizontal-space-between",
+      "hint": "align horizontal space between",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "life-buoy",
+      "hint": "life buoy",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sunglasses",
+      "hint": "sunglasses",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-down-right",
+      "hint": "arrow bend down right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "reddit-logo",
+      "hint": "reddit logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "stairs",
+      "hint": "stairs",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "voicemail",
+      "hint": "voicemail",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "receipt-cent",
+      "hint": "receipt cent",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "laptop",
+      "hint": "laptop",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "notebook",
+      "hint": "notebook",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "pentagram",
+      "hint": "pentagram",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "corner-up-right",
+      "hint": "corner up right",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "ear",
+      "hint": "ear",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "pi",
+      "hint": "pi",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "squirrel",
+      "hint": "squirrel",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "cricket",
+      "hint": "sports cricket",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "keyhole",
+      "hint": "keyhole",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-start-horizontal",
+      "hint": "align start horizontal",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "link-off",
+      "hint": "link 2 off",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sunrise",
+      "hint": "sunrise",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-left-down",
+      "hint": "arrow bend left down",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "replit-logo",
+      "hint": "replit logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "tower-control",
+      "hint": "tower control",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "wifi-off",
+      "hint": "wifi off",
+      "category": "communication",
+      "sets_count": 3
+    },
+    {
+      "name": "receipt-euro",
+      "hint": "receipt euro",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "locate",
+      "hint": "locate",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "scroll",
+      "hint": "scroll",
+      "category": "files-folders",
+      "sets_count": 2
+    },
+    {
+      "name": "square-chart-gantt",
+      "hint": "square chart gantt",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "cup-soda",
+      "hint": "cup soda",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "ear-off",
+      "hint": "ear off",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "radical",
+      "hint": "radical",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "strategy",
+      "hint": "strategy",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "crown",
+      "hint": "chess king",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "lockers",
+      "hint": "lockers",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "align-vertical-space-between",
+      "hint": "align vertical space between",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "lock-open",
+      "hint": "lock open",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "sunset",
+      "hint": "sunset",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-left-up",
+      "hint": "arrow bend left up",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "screwdriver",
+      "hint": "screwdriver",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "wheelchair",
+      "hint": "wheelchair pickup",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-up-down",
+      "hint": "arrow up down",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-indian-rupee",
+      "hint": "receipt indian rupee",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "locate-off",
+      "hint": "locate off",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "article-medium",
+      "hint": "article medium",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "square-percent",
+      "hint": "square percent",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "drumstick",
+      "hint": "drumstick",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "file-video-camera",
+      "hint": "file video camera",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "shovel",
+      "hint": "shovel",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "turtle",
+      "hint": "turtle",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "dice-1",
+      "hint": "dice 1",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "piano-keys",
+      "hint": "piano keys",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "banknote-x",
+      "hint": "banknote x",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "mail-open",
+      "hint": "mail open",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "thermometer-snowflake",
+      "hint": "thermometer snowflake",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-right-down",
+      "hint": "arrow bend right down",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "sketch-logo",
+      "hint": "sketch logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "windmill",
+      "hint": "wind power",
+      "category": "buildings",
+      "sets_count": 2
+    },
+    {
+      "name": "bell-slash",
+      "hint": "bell slash",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-japanese-yen",
+      "hint": "receipt japanese yen",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "mouse",
+      "hint": "mouse",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "article-ny-times",
+      "hint": "article ny times",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "tags",
+      "hint": "tags",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "fire-truck",
+      "hint": "fire truck",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "film",
+      "hint": "film",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "siren",
+      "hint": "siren",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "vibrate-off",
+      "hint": "vibrate off",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "dice-2",
+      "hint": "dice 2",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "pyramid",
+      "hint": "pyramid",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "baseline",
+      "hint": "baseline",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "monitor",
+      "hint": "computer",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "thermometer-sun",
+      "hint": "thermometer sun",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-bend-up-right",
+      "hint": "arrow bend up right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "skype-logo",
+      "hint": "skype logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "a-large-small",
+      "hint": "a large small",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "book-user",
+      "hint": "book user",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-percent",
+      "hint": "receipt percent",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "option",
+      "hint": "option",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-a",
+      "hint": "book a",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "trending-up-down",
+      "hint": "trending up down",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "map-pin-pen",
+      "hint": "map pin pen",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "flip-horizontal-2",
+      "hint": "flip horizontal 2",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "slash",
+      "hint": "slash",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "worm",
+      "hint": "worm",
+      "category": "nature",
+      "sets_count": 1
+    },
+    {
+      "name": "dice-3",
+      "hint": "dice 3",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-ban",
+      "hint": "shield ban",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "brackets",
+      "hint": "brackets",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "moon",
+      "hint": "moon",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "wave-sawtooth",
+      "hint": "wave sawtooth",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-down",
+      "hint": "arrow big down",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "slack-logo",
+      "hint": "slack logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "auto-mode",
+      "hint": "auto mode",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "cell-tower",
+      "hint": "cell tower",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-pound-sterling",
+      "hint": "receipt pound sterling",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "pill",
+      "hint": "pill",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-alert",
+      "hint": "book alert",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "wallet-cards",
+      "hint": "wallet cards",
+      "category": "finance",
+      "sets_count": 1
+    },
+    {
+      "name": "map-pin-x",
+      "hint": "map pin x",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "flower",
+      "hint": "flower",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "spade",
+      "hint": "spade",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "dice-4",
+      "hint": "dice 4",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-half",
+      "hint": "shield half",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "chart-area",
+      "hint": "chart area",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "play",
+      "hint": "play",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "wave-sine",
+      "hint": "wave sine",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-down-dash",
+      "hint": "arrow big down dash",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "spotify-logo",
+      "hint": "spotify logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "balcony",
+      "hint": "balcony",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "clock-plus",
+      "hint": "clock plus",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-russian-ruble",
+      "hint": "receipt russian ruble",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "pin",
+      "hint": "pin",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-audio",
+      "hint": "book audio",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "moped",
+      "hint": "electric moped",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "image-off",
+      "hint": "image off",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "spline",
+      "hint": "spline",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "dice-5",
+      "hint": "dice 5",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-keyhole",
+      "hint": "shield keyhole",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "chart-candlestick",
+      "hint": "chart candlestick",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "power",
+      "hint": "power",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "wave-square",
+      "hint": "wave square",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-left",
+      "hint": "arrow big left",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-2-stack",
+      "hint": "square 2 stack",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "blinds-closed",
+      "hint": "blinds closed",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "list-x",
+      "hint": "list x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-swiss-franc",
+      "hint": "receipt swiss franc",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "plane",
+      "hint": "plane",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-bookmark",
+      "hint": "book bookmark",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "navigation-2",
+      "hint": "navigation 2",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "images",
+      "hint": "images",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "sticker",
+      "hint": "sticker",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "dice-6",
+      "hint": "dice 6",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-lock",
+      "hint": "shield lock",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "grip-horizontal",
+      "hint": "grip horizontal",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "printer",
+      "hint": "printer",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "wave-triangle",
+      "hint": "wave triangle",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-left-dash",
+      "hint": "arrow big left dash",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-3-stack-3d",
+      "hint": "square 3 stack 3d",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "brick-wall",
+      "hint": "brick wall",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "mail-check",
+      "hint": "mail check",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt-turkish-lira",
+      "hint": "receipt turkish lira",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal",
+      "hint": "signal",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-dashed",
+      "hint": "book dashed",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "navigation-off",
+      "hint": "navigation off",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "list-music",
+      "hint": "list music",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "toggle-left",
+      "hint": "toggle left",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "face-mask",
+      "hint": "masks",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "square-dashed-top-solid",
+      "hint": "square dashed top solid",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-4",
+      "hint": "heading 4",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "receipt",
+      "hint": "receipt",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "waves-horizontal",
+      "hint": "waves horizontal",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-right",
+      "hint": "arrow big right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-asterisk",
+      "hint": "square asterisk",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "building-apartment",
+      "hint": "building apartment",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "mail-plus",
+      "hint": "mail plus",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "rectangle-ellipsis",
+      "hint": "rectangle ellipsis",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal-high",
+      "hint": "signal high",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-down",
+      "hint": "book down",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "person-running",
+      "hint": "directions run",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "list-plus",
+      "hint": "list plus",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "toggle-right",
+      "hint": "toggle right",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "football",
+      "hint": "sports football",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "square-divide",
+      "hint": "square divide",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-5",
+      "hint": "heading 5",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "refresh-cw",
+      "hint": "refresh cw",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "waves-ladder",
+      "hint": "waves ladder",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-right-dash",
+      "hint": "arrow big right dash",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-bottom-dashed-scissors",
+      "hint": "square bottom dashed scissors",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "building-office-2",
+      "hint": "building office 2",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "mail-x",
+      "hint": "mail x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "satellite-dish",
+      "hint": "satellite dish",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal-low",
+      "hint": "signal low",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-heart",
+      "hint": "book heart",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "pin-off",
+      "hint": "pin off",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "list-video",
+      "hint": "list video",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "toilet",
+      "hint": "toilet",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "frown",
+      "hint": "mood bad",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "tidal-logo",
+      "hint": "tidal logo",
+      "category": "security",
+      "sets_count": 1
+    },
+    {
+      "name": "heading-6",
+      "hint": "heading 6",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "send",
+      "hint": "send",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "waves-vertical",
+      "hint": "waves vertical",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-up",
+      "hint": "arrow big up",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-centerline-dashed-horizontal",
+      "hint": "square centerline dashed horizontal",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "buildings",
+      "hint": "buildings",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "map-pin-off",
+      "hint": "map pin off",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "shield-ellipsis",
+      "hint": "shield ellipsis",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal-medium",
+      "hint": "signal medium",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-image",
+      "hint": "book image",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "rat",
+      "hint": "rat",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "mic-off",
+      "hint": "mic off",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "tractor",
+      "hint": "tractor",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "globe-americas",
+      "hint": "south america",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "list-indent-decrease",
+      "hint": "list indent decrease",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "shopping-bag",
+      "hint": "shopping bag",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "windows-logo",
+      "hint": "windows logo",
+      "category": "weather",
+      "sets_count": 1
+    },
+    {
+      "name": "arrow-big-up-dash",
+      "hint": "arrow big up dash",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-centerline-dashed-vertical",
+      "hint": "square centerline dashed vertical",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "carpenter",
+      "hint": "carpenter",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "message-circle-check",
+      "hint": "message circle check",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "ship-wheel",
+      "hint": "ship wheel",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal-slash",
+      "hint": "signal cellular off",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-key",
+      "hint": "book key",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "rotate-3d",
+      "hint": "rotate 3d",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "music",
+      "hint": "music",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "triangle",
+      "hint": "triangle",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "globe-off",
+      "hint": "globe off",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "list-indent-increase",
+      "hint": "list indent increase",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "shopping-cart",
+      "hint": "shopping cart",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-circle-down-left",
+      "hint": "arrow circle down left",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-code",
+      "hint": "square code",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "checkroom",
+      "hint": "checkroom",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "message-circle-x",
+      "hint": "message circle x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "stripe-logo",
+      "hint": "stripe logo",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "signal-zero",
+      "hint": "signal zero",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-lock",
+      "hint": "book lock",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "route",
+      "hint": "route",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "palette",
+      "hint": "palette",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "triangle-dashed",
+      "hint": "triangle dashed",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "hand-raised",
+      "hint": "back hand",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "message-square-plus",
+      "hint": "message square plus",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "sparkles",
+      "hint": "sparkles",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-circle-down-right",
+      "hint": "arrow circle down right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-dashed-bottom",
+      "hint": "square dashed bottom",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "circle-small",
+      "hint": "circle small",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "monitor-x",
+      "hint": "monitor x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "tickets-plane",
+      "hint": "tickets plane",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "speaker",
+      "hint": "speaker",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-open-user",
+      "hint": "book open user",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "sandwich",
+      "hint": "sandwich",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "rainbow",
+      "hint": "rainbow",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "van",
+      "hint": "van",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "hand-waving",
+      "hint": "waving hand",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "move-down",
+      "hint": "move down",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "store",
+      "hint": "store",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-circle-up-right",
+      "hint": "arrow circle up right",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-dashed-bottom-code",
+      "hint": "square dashed bottom code",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "crane-tower",
+      "hint": "crane tower",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "phone-missed",
+      "hint": "phone missed",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "tip-jar",
+      "hint": "tip jar",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "sun-dim",
+      "hint": "sun dim",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-up",
+      "hint": "book up",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "ship",
+      "hint": "ship",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "repeat",
+      "hint": "repeat",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "variable",
+      "hint": "variable",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "hockey",
+      "hint": "sports hockey",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "move-up",
+      "hint": "move up",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "table",
+      "hint": "file spreadsheet",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-0-1",
+      "hint": "arrow down 0 1",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-dot",
+      "hint": "square dot",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "curtains",
+      "hint": "curtains",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "phone-plus",
+      "hint": "add ic call",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "tipi",
+      "hint": "tipi",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "timer",
+      "hint": "timer",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "book-up-2",
+      "hint": "book up 2",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "sparkle",
+      "hint": "sparkle",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "repeat-1",
+      "hint": "repeat 1",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "vault",
+      "hint": "vault",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "kayak",
+      "hint": "kayak",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "move-vertical",
+      "hint": "move vertical",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "tag",
+      "hint": "tag",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-1-0",
+      "hint": "arrow down 1 0",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-equal",
+      "hint": "square equal",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "curtains-closed",
+      "hint": "curtains closed",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "printer-x",
+      "hint": "printer x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "traffic-signal",
+      "hint": "traffic signal",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "usb",
+      "hint": "usb",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "bookmark-square",
+      "hint": "bookmark square",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "square-parking",
+      "hint": "square parking",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "russian-ruble",
+      "hint": "russian ruble",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "wheat",
+      "hint": "wheat",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "laugh",
+      "hint": "face grinning",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "notepad-text",
+      "hint": "notepad text",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "terminal",
+      "hint": "terminal",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-a-z",
+      "hint": "arrow down a z",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-function",
+      "hint": "square function",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "door",
+      "hint": "door",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "scan-qr-code",
+      "hint": "scan qr code",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "wifi-pen",
+      "hint": "wifi pen",
+      "category": "connectivity",
+      "sets_count": 1
+    },
+    {
+      "name": "watch",
+      "hint": "watch",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "books",
+      "hint": "books",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "synagogue",
+      "hint": "synagogue",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "shuffle",
+      "hint": "shuffle",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "wheat-off",
+      "hint": "wheat off",
+      "category": "misc",
+      "sets_count": 2
+    },
+    {
+      "name": "parachute",
+      "hint": "paragliding",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "panel-bottom",
+      "hint": "panel bottom",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "thumbs-down",
+      "hint": "thumbs down",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-from-line",
+      "hint": "arrow down from line",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-half",
+      "hint": "square half",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "dry",
+      "hint": "dry",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "screen-share",
+      "hint": "screen share",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "wifi-high",
+      "hint": "wifi high",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "building-library",
+      "hint": "building library",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "theater",
+      "hint": "theater",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "square",
+      "hint": "square",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "acorn",
+      "hint": "acorn",
+      "category": "misc",
+      "sets_count": 1
+    },
+    {
+      "name": "person",
+      "hint": "person",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "panel-right",
+      "hint": "panel right",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "thumbs-up",
+      "hint": "thumbs up",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-narrow-wide",
+      "hint": "arrow down narrow wide",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-logo",
+      "hint": "square logo",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "escalator",
+      "hint": "escalator",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "screen-share-off",
+      "hint": "screen share off",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "wifi-low",
+      "hint": "wifi low",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "car-profile",
+      "hint": "car profile",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "traffic-cone",
+      "hint": "traffic cone",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "stop",
+      "hint": "stop",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "ad",
+      "hint": "ad",
+      "category": "misc",
+      "sets_count": 1
+    },
+    {
+      "name": "person-hiking",
+      "hint": "hiking",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "pen-line",
+      "hint": "pen line",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "trending-down",
+      "hint": "trending down",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-on-square",
+      "hint": "arrow down on square",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-m",
+      "hint": "square m",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "escalator-down",
+      "hint": "escalator down",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "user-search",
+      "hint": "user search",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "wind",
+      "hint": "wind",
+      "category": "devices",
+      "sets_count": 3
+    },
+    {
+      "name": "clipboard-clock",
+      "hint": "clipboard clock",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "train",
+      "hint": "directions railway",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "umbrella",
+      "hint": "parasol",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "air-vent",
+      "hint": "air vent",
+      "category": "misc",
+      "sets_count": 1
+    },
+    {
+      "name": "person-skiing",
+      "hint": "downhill skiing",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "pilcrow",
+      "hint": "pilcrow",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "trending-up",
+      "hint": "trending up",
+      "category": "ui-actions",
+      "sets_count": 4
+    },
+    {
+      "name": "arrow-down-on-square-stack",
+      "hint": "arrow down on square stack",
+      "category": "arrows",
+      "sets_count": 1
+    },
+    {
+      "name": "square-off",
+      "hint": "square off",
+      "category": "brands",
+      "sets_count": 1
+    },
+    {
+      "name": "escalator-up",
+      "hint": "escalator up",
+      "category": "buildings",
+      "sets_count": 1
+    },
+    {
+      "name": "user-x",
+      "hint": "user x",
+      "category": "communication",
+      "sets_count": 2
+    },
+    {
+      "name": "arrow-right-to-line",
+      "hint": "arrow right to line",
+      "category": "devices",
+      "sets_count": 2
+    },
+    {
+      "name": "clipboard-document",
+      "hint": "clipboard document",
+      "category": "files-folders",
+      "sets_count": 1
+    },
+    {
+      "name": "tram",
+      "hint": "directions subway",
+      "category": "maps-travel",
+      "sets_count": 2
+    },
+    {
+      "name": "volume",
+      "hint": "volume",
+      "category": "media",
+      "sets_count": 3
+    },
+    {
+      "name": "ampersand",
+      "hint": "ampersand",
+      "category": "misc",
+      "sets_count": 1
+    },
+    {
+      "name": "person-snowboarding",
+      "hint": "snowboarding",
+      "category": "people",
+      "sets_count": 2
+    },
+    {
+      "name": "quote",
+      "hint": "quote",
+      "category": "text-formatting",
+      "sets_count": 2
+    },
+    {
+      "name": "triangle-alert",
+      "hint": "triangle alert",
+      "category": "ui-actions",
+      "sets_count": 4
+    }
+  ]
+}

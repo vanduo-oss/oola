@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "description": "Structured Phi outline prompts for OOLA. Pro Vector only; style-locked to keeper icons.",
+    "generated": "2026-08-11",
+    "source_list": "icon-prompt-queue.csv",
+    "variant": "oola-structured-phi"
+  },
+  "style_profiles": {
+    "oola-structured-phi": {
+      "_comment": "Primary outline. Structured Phi + Recraft Pro filled-ring look from keepers.",
+      "canvas": "24x24",
+      "viewBox": "0 0 24 24",
+      "padding_px": 2,
+      "live_area_px": 20,
+      "stroke_width_px": 1.5,
+      "stroke_caps": "round",
+      "stroke_joins": "round",
+      "corner_radius_px": 2,
+      "fill": "none",
+      "color": "currentColor",
+      "phi": {
+        "primary_px": 12.4,
+        "secondary_px": 7.6,
+        "tertiary_px": 4.7,
+        "badge_px": 8,
+        "dot_px": 2
+      }
+    }
+  },
+  "prompt_variants": {
+    "oola-structured-phi": "Structured Phi UI icon of {hint}, bold uniform filled-ring outline matching the reference icon style, rounded corners, monochrome near-black, simple geometric UI glyph with hollow interior, same visual mass and corner roundness as the reference, straight lines straight, circles true circles, no facial features or cartoon eyes, no decorative filigree, no complex gear teeth clutter, no gradients no shadows no 3D no text no watermark, transparent background, flat vector SVG"
+  },
+  "style_lock": {
+    "suffix": "Match the reference image's stroke mass, corner radius, and filled outline ring language exactly. Keep the icon as simple as the reference mail/house/search icons.",
+    "references_dir": "drafts/references"
+  },
+  "modifier_templates": {
+    "_comment": "Suffix modifiers. Badge = 8px bottom-right.",
+    "-plus": "Structured Phi UI icon of {base_hint} with an 8px plus badge bottom-right overlapping the base, bold filled-ring outline matching reference style, SVG",
+    "-minus": "Structured Phi UI icon of {base_hint} with an 8px minus badge bottom-right, bold filled-ring outline matching reference style, SVG",
+    "-check": "Structured Phi UI icon of {base_hint} with an 8px check badge bottom-right, bold filled-ring outline matching reference style, SVG",
+    "-x": "Structured Phi UI icon of {base_hint} with an 8px x badge bottom-right, bold filled-ring outline matching reference style, SVG",
+    "-off": "Structured Phi UI icon of {base_hint} with a single 45-degree slash, bold filled-ring outline matching reference style, SVG",
+    "-slash": "Structured Phi UI icon of {base_hint} with a single 45-degree slash, bold filled-ring outline matching reference style, SVG",
+    "-search": "Structured Phi UI icon of {base_hint} combined with magnifier, bold filled-ring outline matching reference style, SVG",
+    "-lock": "Structured Phi UI icon of {base_hint} with an 8px lock badge bottom-right, bold filled-ring outline matching reference style, SVG",
+    "-cog": "Structured Phi UI icon of {base_hint} with an 8px cog badge bottom-right, bold filled-ring outline matching reference style, SVG"
+  },
+  "negative_prompt": "no gradients, no shadows, no 3D, no perspective, no wavy watery strokes, no droplet ornaments, no hand-drawn wobble, no text, no watermark, no background, no facial eyes, no complex filigree, no cloned path copying",
+  "generation_params": {
+    "openrouter_image_api": {
+      "endpoint": "POST https://openrouter.ai/api/v1/images",
+      "params": {
+        "output_format": "svg",
+        "aspect_ratio": "1:1",
+        "n": 1
+      },
+      "models": [
+        {
+          "id": "recraft/recraft-v4.1-pro-vector",
+          "short_id": "recraft-v4.1-pro-vector",
+          "label": "Pro Vector",
+          "approx_usd": 0.3
+        }
+      ],
+      "note": "Pro Vector only. Style lock via input_references (max 1) to drafts/references keepers."
+    }
+  },
+  "post_processing": {
+    "steps": [
+      "Strip XML declaration and <metadata>/C2PA",
+      "Ensure real SVG root",
+      "Map stroke/fill to currentColor in preview",
+      "Reject <text>, <image>, or multi-color decoration"
+    ]
+  }
+}

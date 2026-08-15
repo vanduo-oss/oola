@@ -1,0 +1,25 @@
+{
+  "name": "oola-preview",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "VD3 preview for OOLA icon style drafts (3×10)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 5174 --host"
+  },
+  "dependencies": {
+    "@vanduo-oss/vd3": "^1.2.2",
+    "vue": "^3.5.40"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "vue-tsc": "^3.0.6"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

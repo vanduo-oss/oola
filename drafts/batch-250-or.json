@@ -1,0 +1,1746 @@
+{
+  "meta": {
+    "description": "Structured Phi review batch (250) — 25 hand gold + 225 OpenRouter LLM SVGs",
+    "variant": "oola-structured-phi",
+    "source": "openrouter-llm",
+    "keep": [
+      "mail",
+      "house",
+      "search"
+    ],
+    "style_references": [
+      "search",
+      "house",
+      "mail"
+    ],
+    "gold_count": 25,
+    "llm_count": 225
+  },
+  "icons": [
+    {
+      "name": "search",
+      "hint": "search magnifying glass",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "house",
+      "hint": "house home",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "user",
+      "hint": "user person silhouette head and shoulders",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "cog",
+      "hint": "simple settings gear cog",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "heart",
+      "hint": "heart love",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "star",
+      "hint": "five-point star",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "plus",
+      "hint": "plus add cross",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "trash",
+      "hint": "trash delete bin with lid",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "mail",
+      "hint": "mail envelope",
+      "category": "communication",
+      "source": "hand-gold"
+    },
+    {
+      "name": "bell",
+      "hint": "bell notification",
+      "category": "communication",
+      "source": "hand-gold"
+    },
+    {
+      "name": "x",
+      "hint": "close dismiss x mark",
+      "category": "arrows",
+      "source": "hand-gold"
+    },
+    {
+      "name": "check",
+      "hint": "check mark confirm",
+      "category": "files-folders",
+      "source": "hand-gold"
+    },
+    {
+      "name": "menu",
+      "hint": "hamburger menu three lines",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "minus",
+      "hint": "minus remove horizontal line",
+      "category": "media",
+      "source": "hand-gold"
+    },
+    {
+      "name": "arrow-left",
+      "hint": "arrow left back",
+      "category": "arrows",
+      "source": "hand-gold"
+    },
+    {
+      "name": "arrow-right",
+      "hint": "arrow right forward",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "chevron-down",
+      "hint": "chevron down disclose",
+      "category": "devices",
+      "source": "hand-gold"
+    },
+    {
+      "name": "eye",
+      "hint": "eye visibility",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "lock",
+      "hint": "lock security padlock",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "calendar",
+      "hint": "calendar date",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "camera",
+      "hint": "camera photo capture",
+      "category": "ui-actions",
+      "source": "hand-gold"
+    },
+    {
+      "name": "map-pin",
+      "hint": "map pin location marker",
+      "category": "communication",
+      "source": "hand-gold"
+    },
+    {
+      "name": "phone",
+      "hint": "phone handset call",
+      "category": "communication",
+      "source": "hand-gold"
+    },
+    {
+      "name": "download",
+      "hint": "download arrow to tray",
+      "category": "files-folders",
+      "source": "hand-gold"
+    },
+    {
+      "name": "folder",
+      "hint": "folder files",
+      "category": "files-folders",
+      "source": "hand-gold"
+    },
+    {
+      "name": "arrow-down",
+      "hint": "arrow down",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "square-pen",
+      "hint": "square pen",
+      "category": "brands",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "flame",
+      "hint": "flame",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "at-sign",
+      "hint": "at sign",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-ellipsis",
+      "hint": "circle ellipsis",
+      "category": "connectivity",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-full",
+      "hint": "battery full",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-check",
+      "hint": "circle check",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "map",
+      "hint": "map",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "book-open",
+      "hint": "book open",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "equal",
+      "hint": "equal",
+      "category": "misc",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cake",
+      "hint": "cake",
+      "category": "people",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "divide",
+      "hint": "divide",
+      "category": "security",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bold",
+      "hint": "bold",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-up-right",
+      "hint": "arrow up right",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-down-left",
+      "hint": "arrow down left",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "sun",
+      "hint": "sun",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-question-mark",
+      "hint": "circle question mark",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-medium",
+      "hint": "battery medium",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud",
+      "hint": "cloud",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "redo-2",
+      "hint": "redo 2",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-pause",
+      "hint": "circle pause",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "graduation-cap",
+      "hint": "graduation cap",
+      "category": "misc",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "share",
+      "hint": "share",
+      "category": "people",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "shield-alert",
+      "hint": "shield alert",
+      "category": "security",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chart-pie",
+      "hint": "chart pie",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "badge-check",
+      "hint": "badge check",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-down-right",
+      "hint": "arrow down right",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "zap",
+      "hint": "bolt",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "clock",
+      "hint": "clock",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevron-left",
+      "hint": "chevron left",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-download",
+      "hint": "cloud download",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "undo-2",
+      "hint": "undo 2",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-play",
+      "hint": "circle play",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "trophy",
+      "hint": "trophy",
+      "category": "people",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "dollar-sign",
+      "hint": "dollar sign",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "ban",
+      "hint": "ban",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-up",
+      "hint": "arrow up",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "baby",
+      "hint": "baby",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "key",
+      "hint": "key",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevron-right",
+      "hint": "chevron right",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-upload",
+      "hint": "cloud upload",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "briefcase-medical",
+      "hint": "briefcase medical",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-plus",
+      "hint": "circle plus",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "user-minus",
+      "hint": "user minus",
+      "category": "people",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "italic",
+      "hint": "italic",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bookmark",
+      "hint": "bookmark",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-up-left",
+      "hint": "arrow up left",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "backpack",
+      "hint": "backpack",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "message-circle",
+      "hint": "message circle",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevron-up",
+      "hint": "chevron up",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "copy",
+      "hint": "copy",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bus",
+      "hint": "bus",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-stop",
+      "hint": "circle stop",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "user-plus",
+      "hint": "user plus",
+      "category": "people",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "link",
+      "hint": "link",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "briefcase",
+      "hint": "briefcase",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "banknote",
+      "hint": "banknote",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "beer",
+      "hint": "beer",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "message-square",
+      "hint": "message square",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevrons-down",
+      "hint": "chevrons down",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "file",
+      "hint": "file",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "church",
+      "hint": "church",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "fast-forward",
+      "hint": "fast forward",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "award",
+      "hint": "award",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "list-ordered",
+      "hint": "list ordered",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bug",
+      "hint": "bug",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevrons-up-down",
+      "hint": "chevrons up down",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "camera-off",
+      "hint": "camera off",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "messages-square",
+      "hint": "messages square",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevrons-left",
+      "hint": "chevrons left",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "folder-open",
+      "hint": "folder open",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "croissant",
+      "hint": "croissant",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "file-text",
+      "hint": "file text",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bandage",
+      "hint": "bandage",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "scissors",
+      "hint": "scissors",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "calculator",
+      "hint": "calculator",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "ellipsis",
+      "hint": "ellipsis",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-fog",
+      "hint": "cloud fog",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "phone-incoming",
+      "hint": "phone incoming",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevrons-right",
+      "hint": "chevrons right",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "folder-plus",
+      "hint": "folder plus",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cross",
+      "hint": "cross",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "image",
+      "hint": "image",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "brain",
+      "hint": "brain",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "strikethrough",
+      "hint": "strikethrough",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "calendar-days",
+      "hint": "calendar days",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-chevron-down",
+      "hint": "circle chevron down",
+      "category": "arrows",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-snow",
+      "hint": "cloud snow",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "phone-off",
+      "hint": "phone off",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chevrons-up",
+      "hint": "chevrons up",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "layout-grid",
+      "hint": "layout grid",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "diamond",
+      "hint": "diamond",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "indian-rupee",
+      "hint": "indian rupee",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-lightning",
+      "hint": "cloud lightning",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "underline",
+      "hint": "underline",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "chart-bar",
+      "hint": "chart bar",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "ellipsis-vertical",
+      "hint": "ellipsis vertical",
+      "category": "arrows",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "concierge-bell",
+      "hint": "concierge bell",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "phone-outgoing",
+      "hint": "phone outgoing",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cpu",
+      "hint": "cpu",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "newspaper",
+      "hint": "newspaper",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "egg",
+      "hint": "egg",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "japanese-yen",
+      "hint": "japanese yen",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cookie",
+      "hint": "cookie",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "align-center-horizontal",
+      "hint": "align center horizontal",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-alert",
+      "hint": "circle alert",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "navigation",
+      "hint": "navigation",
+      "category": "arrows",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "fan",
+      "hint": "fan",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "qr-code",
+      "hint": "qr code",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "database",
+      "hint": "database",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "paperclip",
+      "hint": "paperclip",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "factory",
+      "hint": "factory",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "mic",
+      "hint": "mic",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "droplet",
+      "hint": "droplet",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "align-center-vertical",
+      "hint": "align center vertical",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-arrow-down",
+      "hint": "circle arrow down",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "skip-back",
+      "hint": "skip back",
+      "category": "arrows",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "fire-extinguisher",
+      "hint": "fire extinguisher",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "rss",
+      "hint": "rss",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "tablet",
+      "hint": "tablet",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "upload",
+      "hint": "upload",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "fuel",
+      "hint": "fuel",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "paintbrush",
+      "hint": "brush",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "fish",
+      "hint": "fish",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "align-end-vertical",
+      "hint": "align end vertical",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-arrow-left",
+      "hint": "circle arrow left",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "skip-forward",
+      "hint": "skip forward",
+      "category": "arrows",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "footprints",
+      "hint": "footprints",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "shield-check",
+      "hint": "shield check",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "ticket",
+      "hint": "ticket",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "clipboard",
+      "hint": "clipboard",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hamburger",
+      "hint": "hamburger",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pause",
+      "hint": "pause",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "flask-conical",
+      "hint": "flask conical",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "align-start-vertical",
+      "hint": "align start vertical",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-arrow-right",
+      "hint": "circle arrow right",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "gauge",
+      "hint": "gauge",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "smartphone",
+      "hint": "smartphone",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "tv",
+      "hint": "tv",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-check",
+      "hint": "cloud check",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hand-heart",
+      "hint": "hand heart",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pencil",
+      "hint": "pencil",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "handshake",
+      "hint": "handshake",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-dollar-sign",
+      "hint": "circle dollar sign",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-arrow-up",
+      "hint": "circle arrow up",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "infinity",
+      "hint": "infinity",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "video",
+      "hint": "video",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "alarm-clock",
+      "hint": "alarm clock",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "cloud-off",
+      "hint": "cloud off",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hospital",
+      "hint": "hospital",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pipette",
+      "hint": "pipette",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hard-hat",
+      "hint": "hard hat",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "heading",
+      "hint": "heading",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-minus",
+      "hint": "circle minus",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "leaf",
+      "hint": "leaf",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "arrow-left-right",
+      "hint": "arrow left right",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "audio-waveform",
+      "hint": "audio waveform",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "file-check",
+      "hint": "file check",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "ice-cream-cone",
+      "hint": "ice cream cone",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pound-sterling",
+      "hint": "pound sterling",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "heart-crack",
+      "hint": "heart crack",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "heading-1",
+      "hint": "heading 1",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-user",
+      "hint": "circle user",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "microwave",
+      "hint": "microwave",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "building",
+      "hint": "building",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-charging",
+      "hint": "battery charging",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "file-up",
+      "hint": "file up",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "mailbox",
+      "hint": "mailbox",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "radio",
+      "hint": "radio",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "luggage",
+      "hint": "baggage claim",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "heading-2",
+      "hint": "heading 2",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "circle-x",
+      "hint": "circle x",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "radio-tower",
+      "hint": "radio tower",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "building-office",
+      "hint": "business",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-empty",
+      "hint": "battery 0 bar",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "file-x",
+      "hint": "file x",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "map-pin-plus",
+      "hint": "map pin plus",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "rewind",
+      "hint": "rewind",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "medal",
+      "hint": "medal",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "heading-3",
+      "hint": "heading 3",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "code",
+      "hint": "code",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "solar-panel",
+      "hint": "solar panel",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "card-sim",
+      "hint": "card sim",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-low",
+      "hint": "battery low",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "grid-2x2",
+      "hint": "grid 2x2",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "martini",
+      "hint": "martini",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "sliders-horizontal",
+      "hint": "sliders horizontal",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "meh",
+      "hint": "face neutral",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hexagon",
+      "hint": "hexagon",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "credit-card",
+      "hint": "credit card",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "sprout",
+      "hint": "sprout",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "contrast",
+      "hint": "contrast",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-plus",
+      "hint": "battery plus",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "receipt-text",
+      "hint": "receipt text",
+      "category": "files-folders",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "mosque",
+      "hint": "mosque",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "sliders-vertical",
+      "hint": "sliders vertical",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "mountain",
+      "hint": "mountain",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "list-bullet",
+      "hint": "format list bulleted",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "delete",
+      "hint": "delete",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "thermometer",
+      "hint": "thermometer",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "grid-3x3",
+      "hint": "grid 3x3",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "battery-warning",
+      "hint": "battery warning",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "motorbike",
+      "hint": "motorbike",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "users",
+      "hint": "group",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "party-popper",
+      "hint": "party popper",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "paint-bucket",
+      "hint": "paint bucket",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "euro",
+      "hint": "euro",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "waves",
+      "hint": "line squiggle",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "hourglass",
+      "hint": "hourglass",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "blocks",
+      "hint": "blocks",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pizza",
+      "hint": "pizza",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "video-off",
+      "hint": "video off",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "recycle",
+      "hint": "recycle",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "paint-roller",
+      "hint": "paint roller",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "expand",
+      "hint": "expand",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "megaphone",
+      "hint": "megaphone",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bluetooth-connected",
+      "hint": "bluetooth connected",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "plug-zap",
+      "hint": "ev charger",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "volume-2",
+      "hint": "volume 2",
+      "category": "media",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "scale",
+      "hint": "scale",
+      "category": "people",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "pen-tool",
+      "hint": "pen tool",
+      "category": "text-formatting",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "external-link",
+      "hint": "external link",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "merge",
+      "hint": "merge",
+      "category": "communication",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "bluetooth-off",
+      "hint": "bluetooth off",
+      "category": "devices",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    },
+    {
+      "name": "sailboat",
+      "hint": "sailboat",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "openrouter-llm"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "oola",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OOLA icon set drafts for vanduo-oss",
+  "type": "module",
+  "scripts": {
+    "generate:drafts": "node scripts/generate-drafts.mjs",
+    "generate:drafts:dry": "node scripts/generate-drafts.mjs --dry-run",
+    "generate:llm": "node scripts/generate-llm-svgs.mjs",
+    "compose:icons": "node scripts/compose-hand-icons.mjs",
+    "select:batch": "node scripts/select-batch.mjs",
+    "qa:icons": "node scripts/qa-icons.mjs",
+    "preview:dev": "npm run dev --prefix preview",
+    "preview:build": "npm run qa:icons && npm run build --prefix preview",
+    "preview:serve": "npm run preview --prefix preview",
+    "site:dev": "pnpm --dir oolasite dev",
+    "site:build": "pnpm --dir oolasite build",
+    "site:preview": "pnpm --dir oolasite preview"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

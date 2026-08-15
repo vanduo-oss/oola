@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "description": "Organic subset for OR wave",
+    "variant": "oola-structured-phi",
+    "source": "agent-or-hybrid",
+    "keep": [
+      "mail",
+      "house",
+      "search",
+      "layout-grid"
+    ],
+    "style_references": [
+      "search",
+      "house",
+      "mail",
+      "layout-grid"
+    ],
+    "hero_count": 4,
+    "target_count": 10
+  },
+  "icons": [
+    {
+      "name": "flame",
+      "hint": "flame",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cake",
+      "hint": "cake",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "graduation-cap",
+      "hint": "graduation cap",
+      "category": "misc",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "baby",
+      "hint": "baby",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "backpack",
+      "hint": "backpack",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bus",
+      "hint": "bus",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "beer",
+      "hint": "beer",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "church",
+      "hint": "church",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bug",
+      "hint": "bug",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bandage",
+      "hint": "bandage",
+      "category": "people",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    }
+  ]
+}

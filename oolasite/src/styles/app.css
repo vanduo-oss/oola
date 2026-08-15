@@ -1,0 +1,1726 @@
+/* OOLA site shell — layout + dock + icon catalog on @vanduo-oss/vd3 */
+
+:root {
+  color-scheme: light dark;
+  --oola-container: 1680px; /* 1.5× the original 1120px column */
+  --oola-gutter: 1rem;
+  --oola-radius: 0.75rem;
+  --oola-dock-height: 5.4rem;
+  --oola-dock-inset: 1.3125rem; /* 21px fib */
+  --oola-dock-radius: 1.25rem;
+  --oola-dock-brand-size: 2.025rem;
+  --oola-main-bottom: calc(
+    var(--oola-dock-height) + (2 * var(--oola-dock-inset)) + 1.5rem
+  );
+  --oola-main-left: 0px;
+  /* Keep in sync with SHRINK_MS / GROW_MS in dock-orientation.ts */
+  --oola-dock-morph: 480ms;
+  --oola-surface: color-mix(in srgb, var(--vd-bg-primary) 92%, transparent);
+  --oola-font: "Kodchasan", system-ui, sans-serif;
+}
+
+/* Beat vd3 [data-font="…"] so Kodchasan stays global. */
+html,
+html[data-font] {
+  --vd-font-family-sans: var(--oola-font);
+  --vd-font-family: var(--oola-font);
+  --vd-card-border-radius: var(--oola-radius);
+  --vd-btn-border-radius: var(--oola-radius);
+  --vd-btn-border-radius-sm: var(--oola-radius);
+  --vd-btn-border-radius-lg: var(--oola-radius);
+  --vd-input-border-radius: var(--oola-radius);
+  --vd-input-border-radius-sm: var(--oola-radius);
+  --vd-input-border-radius-lg: var(--oola-radius);
+  --vd-badge-border-radius: var(--oola-radius);
+  --vd-border-radius: var(--oola-radius);
+  --vd-border-radius-sm: var(--oola-radius);
+  --vd-border-radius-md: var(--oola-radius);
+  --vd-border-radius-lg: var(--oola-radius);
+  --vd-border-radius-xl: var(--oola-radius);
+}
+
+/* Dark mode: primary stays greyscale (vd3 has no white primary key). */
+[data-theme="dark"] {
+  --vd-color-primary: #f4f4f5;
+  --vd-color-primary-alpha-10: rgb(244 244 245 / 12%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --vd-color-primary: #f4f4f5;
+    --vd-color-primary-alpha-10: rgb(244 244 245 / 12%);
+  }
+}
+
+/*
+ * vd3 .vd-btn-primary is fill: var(--vd-color-primary) + color: var(--vd-color-white).
+ * Dark primary is #f4f4f5, so the label is white-on-white without this invert.
+ */
+[data-theme="dark"] .vd-btn-primary {
+  background-color: #f4f4f5;
+  border-color: #f4f4f5;
+  color: #111;
+}
+
+[data-theme="dark"] .vd-btn-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-primary:active:not(:disabled):not(.disabled):not(.is-disabled) {
+  background-color: #e4e4e7;
+  border-color: #e4e4e7;
+  color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vd-btn-primary {
+    background-color: #f4f4f5;
+    border-color: #f4f4f5;
+    color: #111;
+  }
+
+  :root:not([data-theme="light"]) .vd-btn-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-primary:active:not(:disabled):not(.disabled):not(.is-disabled) {
+    background-color: #e4e4e7;
+    border-color: #e4e4e7;
+    color: #111;
+  }
+}
+
+/*
+ * vd3 .vd-btn-outline hover fills with --vd-color-primary and sets
+ * color: var(--vd-color-white). Dark primary is #f4f4f5, so the label
+ * is white-on-white. Keep a translucent fill + light text so outline
+ * stays distinct from solid primary.
+ */
+[data-theme="dark"] .vd-btn-outline:hover:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-outline:active:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-outline:focus-visible:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-outline-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-outline-primary:active:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .vd-btn-outline-primary:focus-visible:not(:disabled):not(.disabled):not(.is-disabled) {
+  background-color: var(--vd-color-primary-alpha-10);
+  border-color: var(--vd-color-primary);
+  color: #f4f4f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vd-btn-outline:hover:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-outline:active:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-outline:focus-visible:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-outline-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-outline-primary:active:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .vd-btn-outline-primary:focus-visible:not(:disabled):not(.disabled):not(.is-disabled) {
+    background-color: var(--vd-color-primary-alpha-10);
+    border-color: var(--vd-color-primary);
+    color: #f4f4f5;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      color-mix(in srgb, var(--vd-neutral-4, #888) 14%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 90% 0%,
+      color-mix(in srgb, var(--vd-neutral-4, #888) 18%, transparent),
+      transparent 55%
+    ),
+    var(--vd-bg-primary);
+  color: var(--vd-text-primary);
+  font-family: var(--oola-font);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 10000;
+  padding: 0.5rem 0.75rem;
+  background: var(--vd-bg-primary);
+  color: var(--vd-text-primary);
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--oola-radius);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.oola-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.oola-main {
+  flex: 1 1 auto;
+  width: min(var(--oola-container), calc(100% - 2 * var(--oola-gutter)));
+  margin: 0 auto;
+  padding: 2rem 0 var(--oola-main-bottom) var(--oola-main-left);
+  /* No padding/width transition — panel swaps must not animate layout */
+}
+
+/* Clear left-edge dock from rest orientation only (never .is-square) */
+.oola-app.oola-dock-orient-vertical .oola-main {
+  --oola-main-bottom: calc(var(--oola-dock-inset) + 1.5rem);
+  --oola-main-left: calc(
+    var(--oola-dock-height) + var(--oola-dock-inset) + 1rem
+  );
+}
+
+.oola-stage {
+  position: relative;
+}
+
+.oola-panel-enter-active,
+.oola-panel-leave-active {
+  transition:
+    opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.oola-panel-enter-from,
+.oola-panel-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+@keyframes oola-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* ── Bottom dock (horizontal ↔ vertical morph) ── */
+
+.oola-dock {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: var(--oola-dock-radius);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  /* Always-dark dock chrome — light text/icons regardless of site theme */
+  --vd-text-primary: #f4f4f5;
+  --vd-text-secondary: #a1a1aa;
+  --vd-border-color: rgba(255, 255, 255, 0.22);
+  --vd-color-primary: #f4f4f5;
+  --vd-color-primary-alpha-10: rgb(244 244 245 / 12%);
+  color: var(--vd-text-primary);
+  top: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition:
+    width var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    height var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    min-height var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    max-width var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    left var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    right var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    top var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    bottom var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    transform var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    padding var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    gap var(--oola-dock-morph) cubic-bezier(0.16, 1, 0.3, 1),
+    flex-direction 0ms linear;
+}
+
+/* Horizontal rest — centered pill, same column as .oola-main (100% not 100vw) */
+.oola-dock.is-horizontal {
+  --oola-dock-morph: 720ms;
+  left: 50%;
+  right: auto;
+  top: auto;
+  bottom: var(--oola-dock-inset);
+  transform: translateX(-50%);
+  flex-direction: row;
+  width: min(var(--oola-container), calc(100% - 2 * var(--oola-gutter)));
+  max-width: none;
+  height: var(--oola-dock-height);
+  min-height: var(--oola-dock-height);
+  padding: 0.65rem 1.25rem;
+}
+
+/* Brand left, theme right; nav fills middle and centers the link cluster */
+.oola-dock.is-horizontal .oola-dock-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.oola-dock.is-horizontal .oola-dock-actions {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Square waypoint — shrink toward bottom-left brand anchor */
+.oola-dock.is-square {
+  --oola-dock-morph: 480ms;
+  left: var(--oola-dock-inset);
+  right: auto;
+  top: auto;
+  bottom: var(--oola-dock-inset);
+  transform: none;
+  flex-direction: row;
+  width: var(--oola-dock-height);
+  max-width: var(--oola-dock-height);
+  height: var(--oola-dock-height);
+  min-height: var(--oola-dock-height);
+  padding: 0.5rem;
+  justify-content: center;
+  gap: 0;
+}
+
+.oola-dock.is-square .oola-dock-nav,
+.oola-dock.is-square .oola-dock-actions {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  max-width: 0;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex: 0 0 0;
+  transition: none;
+}
+
+/*
+  Vertical rest — full-height left dock (mirror of horizontal full width).
+  Bottom-pinned + explicit height so square → tall grows upward.
+  DOM order + column-reverse: brand bottom, links mid, theme top.
+*/
+.oola-dock.is-vertical {
+  --oola-dock-morph: 720ms;
+  left: var(--oola-dock-inset);
+  right: auto;
+  top: auto;
+  bottom: var(--oola-dock-inset);
+  transform: none;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--oola-dock-height);
+  max-width: var(--oola-dock-height);
+  height: calc(100% - 2 * var(--oola-dock-inset));
+  min-height: calc(100% - 2 * var(--oola-dock-inset));
+  padding: 0.75rem 0.55rem;
+  gap: 0.55rem;
+}
+
+.oola-dock.is-vertical .oola-dock-nav,
+.oola-dock.is-vertical .oola-dock-actions {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  flex: 0 0 auto;
+  transition: opacity 520ms ease 120ms;
+}
+
+.oola-dock.is-vertical .oola-dock-nav {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oola-dock.is-vertical .oola-dock-links {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+}
+
+.oola-dock.is-vertical .oola-dock-item {
+  min-width: 0;
+  width: 100%;
+  padding: 0.4rem 0.25rem;
+}
+
+.oola-dock.is-vertical .oola-dock-actions {
+  margin-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Four letters as a column (vertical rest only — square shows the mark) */
+.oola-dock.is-vertical .oola-dock-brand {
+  margin: 0;
+  max-width: 100%;
+  padding: 0.35rem 0.15rem;
+  white-space: normal;
+  justify-content: center;
+}
+
+.oola-dock.is-vertical .oola-dock-brand-name {
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--oola-dock-brand-size);
+}
+
+/*
+  In-flight morph (square waypoint + shrink/grow): only the oola mark.
+  Beats .is-horizontal / .is-vertical chrome so nav/theme never linger.
+*/
+.oola-dock.is-morphing,
+.oola-dock.is-square {
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.oola-dock.is-morphing.is-horizontal .oola-dock-nav,
+.oola-dock.is-morphing.is-horizontal .oola-dock-actions,
+.oola-dock.is-morphing.is-vertical .oola-dock-nav,
+.oola-dock.is-morphing.is-vertical .oola-dock-actions,
+.oola-dock.is-square .oola-dock-nav,
+.oola-dock.is-square .oola-dock-actions {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  max-width: 0;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex: 0 0 0;
+  transition: none;
+}
+
+.oola-dock.is-morphing .oola-dock-brand,
+.oola-dock.is-square .oola-dock-brand {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.oola-dock.is-morphing .oola-dock-brand-name,
+.oola-dock.is-square .oola-dock-brand-name {
+  display: none;
+}
+
+.oola-dock.is-morphing .oola-dock-brand-mark,
+.oola-dock.is-square .oola-dock-brand-mark {
+  display: inline-flex;
+}
+
+/*
+  Always flat near-black glass — no light-mode off-white flip, no vd3
+  top→bottom wash. Culprits: .vd-glass-34:before and .vd-navbar-glass:before
+  use linear-gradient(to bottom, white, transparent). Specificity must beat
+  .vd-navbar-glass:not(.vd-navbar-scrolled) (0,2,0).
+*/
+nav.oola-dock.vd-navbar-glass.vd-glass-34,
+nav.oola-dock.vd-navbar-glass.vd-glass-34:not(.vd-navbar-scrolled) {
+  --vd-glass-blur: 22px;
+  --vd-glass-saturate: 1.8;
+  --vd-glass-bg-opacity: 0.9;
+  --vd-glass-highlight-alpha: 0;
+  --vd-glass-border-alpha: 0.22;
+  --vd-navbar-glass-specular: 0.12;
+  background: color-mix(in srgb, #0a0a0a 90%, transparent);
+  background-image: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(var(--vd-glass-blur))
+    saturate(var(--vd-glass-saturate));
+  backdrop-filter: blur(var(--vd-glass-blur)) saturate(var(--vd-glass-saturate));
+}
+
+nav.oola-dock.vd-navbar-glass.vd-glass-34::before,
+nav.oola-dock.vd-navbar-glass.vd-glass-34:not(.vd-navbar-scrolled)::before {
+  background: none;
+  background-image: none;
+  opacity: 0;
+}
+
+.oola-dock-nav {
+  position: relative;
+  transition: opacity 220ms ease;
+}
+
+.oola-dock-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.oola-dock-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+  transition: opacity 220ms ease;
+}
+
+.oola-dock-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.15rem 0.35rem;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: var(--oola-radius);
+  flex-shrink: 0;
+  transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+.oola-dock-brand:hover:not(:disabled) {
+  opacity: 0.92;
+  color: var(--vd-text-primary);
+}
+
+.oola-dock-brand:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.oola-dock-brand:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--vd-text-primary) 45%, transparent);
+  outline-offset: 2px;
+}
+
+.oola-dock-brand:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.oola-dock-brand-mark {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  line-height: 0;
+}
+
+.oola-dock-brand-name {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0;
+  font-size: var(--oola-dock-brand-size);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  line-height: 1;
+}
+
+.oola-dock-brand-letter {
+  display: block;
+  flex-shrink: 0;
+  font-size: var(--oola-dock-brand-size);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.oola-dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-width: 4.25rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.75rem;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--vd-text-primary);
+  opacity: 0.72;
+  transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+.oola-dock-item:hover,
+.oola-dock-item:focus-visible {
+  opacity: 1;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.oola-dock-item.is-active {
+  opacity: 1;
+}
+
+.oola-dock-item .oola-icon {
+  display: inline-flex;
+}
+
+.oola-dock-label {
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.oola-dock-item.is-active .oola-dock-label {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* Icon-only theme toggle — no border/box; hit target unchanged */
+.oola-dock .vd-theme-switcher-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: var(--oola-radius);
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  color: var(--vd-text-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.18s ease;
+}
+
+.oola-dock .vd-theme-switcher-toggle:hover {
+  color: var(--vd-color-primary);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: scale(1.06);
+}
+
+.oola-dock .vd-theme-switcher-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.oola-dock .vd-theme-switcher-toggle:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--vd-text-primary) 45%, transparent);
+  outline-offset: 2px;
+  background: transparent;
+}
+
+/* ── Pages ── */
+
+.oola-page {
+  padding-top: 0.5rem;
+}
+
+.oola-page-head {
+  margin-bottom: 2rem;
+}
+
+.oola-page-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.oola-hero-page {
+  position: relative;
+  border-radius: var(--oola-radius);
+  overflow: hidden;
+  min-height: min(70vh, 32rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--vd-text-primary);
+}
+
+.oola-hero-page .oola-lede {
+  color: var(--vd-text-secondary);
+}
+
+/* vd3 overlay textures are already black/white; --vd-surface-base is the field they sit on. */
+.oola-hero-page.vd-surface-noise,
+.oola-hero-page.vd-surface-dots,
+.oola-hero-page.vd-surface-grid {
+  --vd-surface-base: linear-gradient(
+    155deg,
+    var(--vd-neutral-1, #f5f5f5) 0%,
+    var(--vd-neutral-2, #e5e5e5) 48%,
+    var(--vd-neutral-3, #d4d4d4) 100%
+  );
+}
+
+[data-theme="dark"] .oola-hero-page.vd-surface-noise,
+[data-theme="dark"] .oola-hero-page.vd-surface-dots,
+[data-theme="dark"] .oola-hero-page.vd-surface-grid {
+  --vd-surface-base: linear-gradient(
+    155deg,
+    var(--vd-neutral-6, #525252) 0%,
+    var(--vd-neutral-8, #262626) 48%,
+    var(--vd-neutral-9, #171717) 100%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .oola-hero-page.vd-surface-noise,
+  :root:not([data-theme="light"]) .oola-hero-page.vd-surface-dots,
+  :root:not([data-theme="light"]) .oola-hero-page.vd-surface-grid {
+    --vd-surface-base: linear-gradient(
+      155deg,
+      var(--vd-neutral-6, #525252) 0%,
+      var(--vd-neutral-8, #262626) 48%,
+      var(--vd-neutral-9, #171717) 100%
+    );
+  }
+}
+
+.oola-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem;
+  max-width: 40rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.oola-hero-board {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: min(200px, 50vw);
+  aspect-ratio: 1;
+  margin-right: 2rem;
+  padding: 0.15rem;
+  gap: 0.2rem;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--vd-text-primary);
+}
+
+.oola-hero-board-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.oola-hero-board-cell .oola-icon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 767px) {
+  .oola-hero-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .oola-hero-inner {
+    max-width: none;
+    align-self: stretch;
+  }
+
+  .oola-hero-board {
+    width: min(200px, 50vw);
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.oola-eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-hero-page .oola-eyebrow,
+.oola-hero-page .oola-title-name,
+.oola-hero-page .oola-title-sep,
+.oola-hero-page .oola-title-ula,
+.oola-hero-page .oola-lede,
+.oola-hero-page .oola-hero-actions,
+.oola-hero-page .oola-hero-board {
+  animation: oola-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.oola-hero-page .oola-eyebrow {
+  animation-delay: 0ms;
+}
+
+.oola-hero-page .oola-title-name {
+  animation-delay: 80ms;
+}
+
+.oola-hero-page .oola-title-sep,
+.oola-hero-page .oola-title-ula {
+  animation-delay: 160ms;
+}
+
+.oola-hero-page .oola-lede {
+  animation-delay: 240ms;
+}
+
+.oola-hero-page .oola-hero-actions {
+  animation-delay: 320ms;
+}
+
+.oola-hero-page .oola-hero-board {
+  animation-delay: 400ms;
+}
+
+.oola-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 1;
+  font-style: normal;
+}
+
+.oola-title-name {
+  text-transform: lowercase;
+}
+
+.oola-title-sep {
+  font-weight: 300;
+  font-size: 0.85em;
+  opacity: 0.45;
+  font-style: normal;
+}
+
+.oola-title-ula {
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
+  font-style: normal;
+}
+
+.oola-lede {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--vd-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.oola-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.oola-app .vd-btn-primary,
+.oola-app .vd-btn-outline {
+  transition:
+    filter 120ms ease,
+    transform 120ms ease;
+}
+
+.oola-app .vd-btn-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+.oola-app .vd-btn-outline:hover:not(:disabled):not(.disabled):not(.is-disabled) {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.oola-prose {
+  max-width: 40rem;
+  color: var(--vd-text-secondary);
+  line-height: 1.6;
+}
+
+.oola-prose h2 {
+  margin: 2rem 0 0.5rem;
+  color: var(--vd-text-primary);
+  font-size: 1.25rem;
+}
+
+.oola-prose p {
+  margin: 0 0 1rem;
+}
+
+.oola-prose a:not(.vd-btn) {
+  color: var(--vd-color-primary);
+}
+
+.oola-welcome-reopen {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--vd-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.oola-welcome-reopen:hover,
+.oola-welcome-reopen:focus-visible {
+  color: var(--vd-text-primary);
+}
+
+.oola-welcome-reopen:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--vd-text-primary) 45%, transparent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/*
+ * Backdrop and dialog are separate body-level siblings (two Teleports).
+ * Dim only the backdrop. Never put opacity/filter on a shared parent.
+ */
+.oola-welcome-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.oola-welcome-dialog {
+  position: fixed;
+  z-index: 1201;
+  inset: 0;
+  width: min(calc(100% - 3.5rem), 987px);
+  max-height: calc(100vh - 3.5rem);
+  height: fit-content;
+  margin: auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--oola-font);
+  color: #111;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4d4d4;
+  border-radius: var(--oola-radius);
+  box-shadow: 0 18px 48px rgb(0 0 0 / 28%);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  opacity: 1;
+  filter: none;
+}
+
+[data-theme="dark"] .oola-welcome-dialog {
+  color: #f4f4f5;
+  background-color: #171717;
+  border-color: #3f3f46;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .oola-welcome-dialog {
+    color: #f4f4f5;
+    background-color: #171717;
+    border-color: #3f3f46;
+  }
+}
+
+.oola-welcome-header,
+.oola-welcome-body,
+.oola-welcome-footer {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.oola-welcome-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+}
+
+.oola-welcome-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.oola-welcome-close {
+  flex-shrink: 0;
+  margin: -0.25rem -0.35rem 0 0;
+  padding: 0.25rem 0.45rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+.oola-welcome-close:hover,
+.oola-welcome-close:focus-visible {
+  opacity: 1;
+}
+
+.oola-welcome-close:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.oola-welcome-body {
+  padding-top: 0.35rem;
+  padding-bottom: 1.25rem;
+}
+
+.oola-welcome-footer {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.oola-welcome .vd-modal-header,
+.oola-welcome .vd-modal-footer {
+  border-color: transparent;
+}
+
+.oola-welcome .vd-modal-title {
+  font-family: var(--oola-font);
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.oola-welcome .vd-modal-footer {
+  justify-content: flex-start;
+}
+
+.oola-welcome-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.25rem 2.75rem;
+  align-items: start;
+}
+
+.oola-welcome-lede {
+  max-width: 38rem;
+  font-size: 1.12rem;
+}
+
+.oola-welcome-support {
+  margin: 1.15rem 0 0;
+  max-width: 38rem;
+  color: var(--vd-text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.oola-welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.oola-bmc-btn,
+.oola-bmc-btn:visited {
+  background: #ffdd00;
+  border-color: #111;
+  color: #111;
+}
+
+.oola-bmc-btn:hover:not(:disabled):not(.disabled):not(.is-disabled),
+.oola-bmc-btn:active:not(:disabled):not(.disabled):not(.is-disabled),
+.oola-bmc-btn:focus-visible {
+  background: #ffdd00;
+  border-color: #111;
+  color: #111;
+  filter: brightness(1.04);
+}
+
+[data-theme="dark"] .oola-bmc-btn,
+[data-theme="dark"] .oola-bmc-btn:hover:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .oola-bmc-btn:active:not(:disabled):not(.disabled):not(.is-disabled),
+[data-theme="dark"] .oola-bmc-btn:focus-visible {
+  background: #ffdd00;
+  border-color: #111;
+  color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .oola-bmc-btn,
+  :root:not([data-theme="light"]) .oola-bmc-btn:hover:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .oola-bmc-btn:active:not(:disabled):not(.disabled):not(.is-disabled),
+  :root:not([data-theme="light"]) .oola-bmc-btn:focus-visible {
+    background: #ffdd00;
+    border-color: #111;
+    color: #111;
+  }
+}
+
+.oola-welcome-qr {
+  display: block;
+  width: min(220px, 56vw);
+  flex-shrink: 0;
+  padding: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--oola-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.oola-welcome-qr img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.oola-welcome-qr:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .oola-welcome-layout {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+/* ── Sections (catalog) ── */
+
+.oola-section {
+  margin-bottom: 3rem;
+}
+
+.oola-section-head h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.oola-section-head p {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--vd-text-secondary);
+  line-height: 1.5;
+}
+
+.oola-size-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.oola-size-label {
+  font-size: 0.85rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-size-group {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.oola-size-btn {
+  border: 1px solid var(--vd-border-color);
+  background: var(--oola-surface);
+  color: var(--vd-text-primary);
+  border-radius: var(--oola-radius);
+  padding: 0.35rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.oola-size-btn.is-active {
+  border-color: var(--vd-color-primary);
+  color: var(--vd-color-primary);
+  background: var(--vd-color-primary-alpha-10);
+}
+
+.oola-pager {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.oola-pager .oola-size-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Icon weights (6-up) ── */
+
+.oola-weight-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.oola-weight-label {
+  font-size: 0.85rem;
+  color: var(--vd-text-secondary);
+}
+
+.oola-weight-select {
+  border: 1px solid var(--vd-border-color);
+  background: var(--oola-surface);
+  color: var(--vd-text-primary);
+  border-radius: var(--oola-radius);
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.oola-weight-empty {
+  margin: 0 0 1rem;
+  color: var(--vd-text-secondary);
+  font-size: 0.95rem;
+}
+
+.oola-weights-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.oola-weights {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(5.5rem, 1fr));
+  gap: 1.5rem 2rem;
+  min-width: 36rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--oola-radius);
+  background: var(--oola-surface);
+  backdrop-filter: blur(8px);
+}
+
+.oola-weight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+  animation: oola-rise 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.oola-weight-item:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.oola-weight-item:nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.oola-weight-item:nth-child(3) {
+  animation-delay: 80ms;
+}
+
+.oola-weight-item:nth-child(4) {
+  animation-delay: 120ms;
+}
+
+.oola-weight-item:nth-child(5) {
+  animation-delay: 160ms;
+}
+
+.oola-weight-item:nth-child(6) {
+  animation-delay: 200ms;
+}
+
+.oola-weight-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.oola-weight-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vd-text-primary);
+}
+
+.oola-weight-token {
+  font-size: 0.75rem;
+  color: var(--vd-color-primary, var(--vd-text-secondary));
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ── Comparison grid ── */
+
+.oola-grid-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--vd-border-color);
+  border-radius: var(--oola-radius);
+  background: var(--oola-surface);
+  backdrop-filter: blur(8px);
+}
+
+.oola-grid {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.oola-grid--weights {
+  min-width: 60rem;
+  table-layout: fixed;
+}
+
+.oola-grid--weights th:first-child,
+.oola-grid--weights td:first-child {
+  width: 8.5rem;
+}
+
+.oola-grid th,
+.oola-grid td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--vd-border-color);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.oola-grid thead th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vd-text-secondary);
+  background: color-mix(in srgb, var(--vd-bg-secondary, #eee) 55%, transparent);
+  vertical-align: bottom;
+}
+
+.oola-model-slug {
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--vd-text-secondary);
+  word-break: break-all;
+}
+
+.oola-grid tbody th {
+  text-align: left;
+  font-weight: 500;
+}
+
+.oola-grid tbody tr {
+  animation: oola-rise 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.oola-grid tbody tr:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.oola-grid tbody tr:nth-child(2) {
+  animation-delay: 20ms;
+}
+
+.oola-grid tbody tr:nth-child(3) {
+  animation-delay: 40ms;
+}
+
+.oola-grid tbody tr:nth-child(4) {
+  animation-delay: 60ms;
+}
+
+.oola-grid tbody tr:nth-child(5) {
+  animation-delay: 80ms;
+}
+
+.oola-grid tbody tr:nth-child(6) {
+  animation-delay: 100ms;
+}
+
+.oola-grid tbody tr:nth-child(7) {
+  animation-delay: 120ms;
+}
+
+.oola-grid tbody tr:nth-child(8) {
+  animation-delay: 140ms;
+}
+
+.oola-grid tbody tr:nth-child(9) {
+  animation-delay: 160ms;
+}
+
+.oola-grid tbody tr:nth-child(10) {
+  animation-delay: 180ms;
+}
+
+.oola-grid tbody tr:nth-child(11) {
+  animation-delay: 200ms;
+}
+
+.oola-grid tbody tr:nth-child(12) {
+  animation-delay: 220ms;
+}
+
+.oola-grid tbody tr:nth-child(n + 13) {
+  animation-delay: 240ms;
+}
+
+.oola-grid tbody th code {
+  font-size: 0.9rem;
+}
+
+.oola-keeper-badge,
+.oola-batch-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vd-color-primary, #333);
+  border: 1px solid color-mix(in srgb, var(--vd-color-primary, #333) 35%, transparent);
+  border-radius: var(--oola-radius);
+  vertical-align: middle;
+}
+
+.oola-batch-badge {
+  color: color-mix(in srgb, var(--vd-color-primary, #333) 70%, transparent);
+  border-color: color-mix(in srgb, var(--vd-color-primary, #333) 22%, transparent);
+}
+
+.oola-grid tbody tr:last-child th,
+.oola-grid tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.oola-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+}
+
+.oola-cell--motion {
+  overflow: visible;
+  min-height: 4.25rem;
+  padding: 0.35rem;
+}
+
+.oola-grid td:has(> .oola-cell--motion) {
+  overflow: visible;
+}
+
+/* ── Icon paint ── */
+
+.oola-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.oola-icon-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.oola-icon-svg :deep(svg) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.oola-icon-missing {
+  opacity: 0.4;
+  font-size: 0.85rem;
+}
+
+.oola-icon--fill-open {
+  opacity: 0.72;
+}
+
+.oola-icon--motion {
+  box-sizing: content-box;
+  padding: calc(var(--oola-icon-size, 24px) * 0.22);
+  overflow: visible;
+}
+
+.oola-icon--motion .oola-icon-svg {
+  overflow: visible;
+}
+
+.oola-icon--motion .oola-icon-svg svg {
+  overflow: visible;
+  transform-box: view-box;
+  transform-origin: center;
+}
+
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg path,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg circle,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg line,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg polyline,
+.oola-icon--motion[data-motion="draw"] .oola-icon-svg svg polygon {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 0;
+  animation: oola-motion-draw 2.4s ease-in-out infinite;
+}
+
+@keyframes oola-motion-draw {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  38% {
+    stroke-dashoffset: 0;
+  }
+  82% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 280;
+  }
+}
+
+.oola-icon--motion[data-motion="spin"] .oola-icon-svg svg {
+  animation: oola-motion-spin 2.4s linear infinite;
+}
+
+@keyframes oola-motion-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.oola-icon--motion[data-motion="beat"] .oola-icon-svg svg {
+  animation: oola-motion-beat 1.6s ease-in-out infinite;
+}
+
+@keyframes oola-motion-beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.12);
+  }
+  55% {
+    transform: scale(1.04);
+  }
+}
+
+.oola-icon--motion[data-motion="swing"] .oola-icon-svg svg {
+  transform-origin: center top;
+  animation: oola-motion-swing 2s ease-in-out infinite;
+}
+
+@keyframes oola-motion-swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+}
+
+.oola-icon--motion[data-motion="bounce"] .oola-icon-svg svg {
+  animation: oola-motion-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes oola-motion-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+.oola-icon--motion[data-motion="pulse"] .oola-icon-svg svg {
+  animation: oola-motion-pulse 2s ease-in-out infinite;
+}
+
+@keyframes oola-motion-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.06);
+  }
+}
+
+.oola-icon--motion[data-motion="wiggle"] .oola-icon-svg svg {
+  animation: oola-motion-wiggle 1.8s ease-in-out infinite;
+}
+
+@keyframes oola-motion-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-6deg);
+  }
+  40% {
+    transform: rotate(6deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  80% {
+    transform: rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oola-app *,
+  .oola-app *::before,
+  .oola-app *::after,
+  .oola-welcome-backdrop,
+  .oola-welcome-dialog,
+  .oola-welcome-dialog *,
+  .oola-welcome-dialog *::before,
+  .oola-welcome-dialog *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .oola-panel-enter-from,
+  .oola-panel-leave-to,
+  .oola-panel-enter-active,
+  .oola-panel-leave-active {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .oola-icon--motion .oola-icon-svg svg,
+  .oola-icon--motion .oola-icon-svg svg path,
+  .oola-icon--motion .oola-icon-svg svg circle,
+  .oola-icon--motion .oola-icon-svg svg line,
+  .oola-icon--motion .oola-icon-svg svg polyline,
+  .oola-icon--motion .oola-icon-svg svg polygon {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .oola-dock .vd-theme-switcher-toggle:hover {
+    transform: none;
+  }
+
+  .oola-dock,
+  .oola-main {
+    transition: none !important;
+  }
+
+  .oola-app .vd-btn-primary:hover:not(:disabled):not(.disabled):not(.is-disabled),
+  .oola-app .vd-btn-outline:hover:not(:disabled):not(.disabled):not(.is-disabled) {
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --oola-dock-height: 4.8rem;
+    --oola-dock-brand-size: 1.1rem;
+  }
+
+  /* Force horizontal layout tokens — morph disabled in JS */
+  .oola-app.oola-dock-orient-vertical .oola-main {
+    --oola-main-bottom: calc(
+      var(--oola-dock-height) + (2 * var(--oola-dock-inset)) + 1.5rem
+    );
+    --oola-main-left: 0px;
+  }
+
+  .oola-dock {
+    gap: 0.35rem;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .oola-dock-item {
+    min-width: 3.25rem;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .oola-dock-label {
+    font-size: 0.55rem;
+  }
+}

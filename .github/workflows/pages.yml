@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+# Publishes oolasite/dist to https://oola.vanduo.dev/ (custom subdomain; Vite base `/`).
+# Do not set VITE_BASE — oolasite/vite.config.ts already defaults to `/`.
+#
+# After the first push of this workflow, the repo must be public (vanduo-oss is
+# on GitHub Free) and Pages source must be GitHub Actions:
+#   Settings → Pages → Source: GitHub Actions
+# Custom domain: oola.vanduo.dev
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+        with:
+          version: 11.18.0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: oolasite/pnpm-lock.yaml
+
+      - run: pnpm --dir oolasite install --frozen-lockfile
+
+      - run: pnpm --dir oolasite run typecheck
+
+      - name: Build site (base '/')
+        run: pnpm --dir oolasite build
+
+      - name: Disable Jekyll processing
+        run: touch oolasite/dist/.nojekyll
+
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: oolasite/dist
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

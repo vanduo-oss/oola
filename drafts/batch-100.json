@@ -1,0 +1,705 @@
+{
+  "meta": {
+    "description": "Structured Phi quality batch (100) — hero lock (search/house/mail/layout-grid) + regenerated UI set",
+    "variant": "oola-structured-phi",
+    "source": "agent-or-hybrid",
+    "keep": [
+      "oola",
+      "mail",
+      "house",
+      "search",
+      "layout-grid"
+    ],
+    "style_references": [
+      "search",
+      "house",
+      "mail",
+      "layout-grid"
+    ],
+    "hero_count": 4,
+    "target_count": 100
+  },
+  "icons": [
+    {
+      "name": "oola",
+      "hint": "oola macron u logotype",
+      "category": "brands",
+      "source": "hero-lock"
+    },
+    {
+      "name": "search",
+      "hint": "search magnifying glass",
+      "category": "ui-actions",
+      "source": "hero-lock"
+    },
+    {
+      "name": "house",
+      "hint": "house home",
+      "category": "ui-actions",
+      "source": "hero-lock"
+    },
+    {
+      "name": "user",
+      "hint": "user person silhouette head and shoulders",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cog",
+      "hint": "simple settings gear cog",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "heart",
+      "hint": "heart love",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "star",
+      "hint": "five-point star",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "plus",
+      "hint": "plus add cross",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "trash",
+      "hint": "trash delete bin with lid",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "mail",
+      "hint": "mail envelope",
+      "category": "communication",
+      "source": "hero-lock"
+    },
+    {
+      "name": "bell",
+      "hint": "bell notification",
+      "category": "communication",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "x",
+      "hint": "close dismiss x mark",
+      "category": "arrows",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "check",
+      "hint": "check mark confirm",
+      "category": "files-folders",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "menu",
+      "hint": "hamburger menu three lines",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "minus",
+      "hint": "minus remove horizontal line",
+      "category": "media",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-left",
+      "hint": "arrow left back",
+      "category": "arrows",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-right",
+      "hint": "arrow right forward",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevron-down",
+      "hint": "chevron down disclose",
+      "category": "devices",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "eye",
+      "hint": "eye visibility",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "lock",
+      "hint": "lock security padlock",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "calendar",
+      "hint": "calendar date",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "camera",
+      "hint": "camera photo capture",
+      "category": "ui-actions",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "map-pin",
+      "hint": "map pin location marker",
+      "category": "communication",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "phone",
+      "hint": "phone handset call",
+      "category": "communication",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "download",
+      "hint": "download arrow to tray",
+      "category": "files-folders",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "folder",
+      "hint": "folder files",
+      "category": "files-folders",
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-down",
+      "hint": "arrow down",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "square-pen",
+      "hint": "square pen",
+      "category": "brands",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "flame",
+      "hint": "flame",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "at-sign",
+      "hint": "at sign",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-ellipsis",
+      "hint": "circle ellipsis",
+      "category": "connectivity",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "battery-full",
+      "hint": "battery full",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-check",
+      "hint": "circle check",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "map",
+      "hint": "map",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "book-open",
+      "hint": "book open",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "equal",
+      "hint": "equal",
+      "category": "misc",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cake",
+      "hint": "cake",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "divide",
+      "hint": "divide",
+      "category": "security",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bold",
+      "hint": "bold",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-up-right",
+      "hint": "arrow up right",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-down-left",
+      "hint": "arrow down left",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "sun",
+      "hint": "sun",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-question-mark",
+      "hint": "circle question mark",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "battery-medium",
+      "hint": "battery medium",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cloud",
+      "hint": "cloud",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "redo-2",
+      "hint": "redo 2",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-pause",
+      "hint": "circle pause",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "graduation-cap",
+      "hint": "graduation cap",
+      "category": "misc",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "share",
+      "hint": "share",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "shield-alert",
+      "hint": "shield alert",
+      "category": "security",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chart-pie",
+      "hint": "chart pie",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "badge-check",
+      "hint": "badge check",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-down-right",
+      "hint": "arrow down right",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "zap",
+      "hint": "bolt",
+      "category": "buildings",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "clock",
+      "hint": "clock",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevron-left",
+      "hint": "chevron left",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cloud-download",
+      "hint": "cloud download",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "undo-2",
+      "hint": "undo 2",
+      "category": "maps-travel",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-play",
+      "hint": "circle play",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "trophy",
+      "hint": "trophy",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "dollar-sign",
+      "hint": "dollar sign",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "ban",
+      "hint": "ban",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-up",
+      "hint": "arrow up",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "baby",
+      "hint": "baby",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "key",
+      "hint": "key",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevron-right",
+      "hint": "chevron right",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "cloud-upload",
+      "hint": "cloud upload",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "briefcase-medical",
+      "hint": "briefcase medical",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-plus",
+      "hint": "circle plus",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "user-minus",
+      "hint": "user minus",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "italic",
+      "hint": "italic",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bookmark",
+      "hint": "bookmark",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "arrow-up-left",
+      "hint": "arrow up left",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "backpack",
+      "hint": "backpack",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "message-circle",
+      "hint": "message circle",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevron-up",
+      "hint": "chevron up",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "copy",
+      "hint": "copy",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bus",
+      "hint": "bus",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "circle-stop",
+      "hint": "circle stop",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "user-plus",
+      "hint": "user plus",
+      "category": "people",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "link",
+      "hint": "link",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "briefcase",
+      "hint": "briefcase",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "banknote",
+      "hint": "banknote",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "beer",
+      "hint": "beer",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "message-square",
+      "hint": "message square",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevrons-down",
+      "hint": "chevrons down",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "file",
+      "hint": "file",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "church",
+      "hint": "church",
+      "category": "maps-travel",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "fast-forward",
+      "hint": "fast forward",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "award",
+      "hint": "award",
+      "category": "people",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "list-ordered",
+      "hint": "list ordered",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bug",
+      "hint": "bug",
+      "category": "ui-actions",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevrons-up-down",
+      "hint": "chevrons up down",
+      "category": "arrows",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "camera-off",
+      "hint": "camera off",
+      "category": "buildings",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "messages-square",
+      "hint": "messages square",
+      "category": "communication",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "chevrons-left",
+      "hint": "chevrons left",
+      "category": "devices",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "folder-open",
+      "hint": "folder open",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "file-text",
+      "hint": "file text",
+      "category": "media",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "bandage",
+      "hint": "bandage",
+      "category": "people",
+      "sets_count": 3,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "scissors",
+      "hint": "scissors",
+      "category": "text-formatting",
+      "sets_count": 4,
+      "source": "batch-100-regen"
+    },
+    {
+      "name": "layout-grid",
+      "hint": "layout grid",
+      "category": "files-folders",
+      "sets_count": 4,
+      "source": "hero-lock"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+schema: spec-driven
+
+context: |
+  Project: OOLA (@vanduo-oss/oola) — icon set for the Vanduo OSS family.
+  Brand: Lithuanian ūla (gust of wind/rain); vanduo = water. Style: Structured Phi
+  (industry-conventional geometry + golden-ratio proportions + 2px corner radius).
+
+  Stack:
+  - Catalog: icon-master-list.json, icon-prompt-queue.csv
+  - Generation: scripts/generate-drafts.mjs → OpenRouter Image API (native SVG)
+  - Models (SVG-capable on OR today): recraft/recraft-v4.1-vector (~$0.08),
+    recraft/recraft-v4.1-pro-vector (~$0.30). Raster models are out of scope.
+  - Preview: preview/ Vue 3 + Vite + @vanduo-oss/vd3 (navbar, theme switcher/customizer)
+  - Site experiment: oolasite/ Vue 3 + vite-ssg + @vanduo-oss/vd3@1.4.0
+    (bottom dock chrome; future oola.vanduo.dev)
+  - Output drafts: drafts/oola-structured-phi/{model-slug}/{name}.svg
+
+  Rules:
+  - Use original path data only.
+  - Primary variant is outline `oola-structured-phi`. `oola-filled` is planned later.
+  - Do not commit .env or API keys. Do not commit unless the user asks.
+
+rules:
+  proposal:
+    - State which icons/models change
+    - Include a Non-goals section
+  specs:
+    - Use Given/When/Then scenarios
+    - Use SHALL/MUST for normative requirements
+  design:
+    - Prefer Recraft vector models for native SVG
+    - Keep Structured Phi prompt identical across model A/B comparisons
+  tasks:
+    - Include generate + preview verification steps
+    - Never commit secrets
+
+operations:
+  apply:
+    guidance:
+      - Do not commit unless the user asks
+  archive:
+    guidance:
+      - Keep the completion summary concise
